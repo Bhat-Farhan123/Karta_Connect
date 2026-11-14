@@ -1,0 +1,15 @@
+# Supabase CLI project configuration starter.
+# Link this local workspace to the existing hosted project before using CLI commands.
+project_id = "karta-connect"
+
+[api]
+enabled = true
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+major_version = 17
+
+[studio]
+enabled = true

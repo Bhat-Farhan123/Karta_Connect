@@ -1,0 +1,4404 @@
+/* Scholar portal styles. Migrate rules from legacy-app.css in small, visually tested batches. */
+
+/* =========================================================
+   KARTA CONNECT — PREMIUM SCHOLAR HOME (V22.7.0)
+   Scoped to Scholar Home only. Preserves existing components,
+   data, navigation, post actions and all other portals.
+   ========================================================= */
+
+   
+.app-scholar .main {
+    background: #fafaf4 !important;
+
+} 
+.app-scholar .main-inner {
+  max-width:1680px!important;
+  padding:30px clamp(22px,3.1vw,48px) 48px!important;
+}
+.app-scholar .dashboard-columns {
+  display:grid!important;
+  grid-template-columns:minmax(205px, .78fr) minmax(440px, 2.05fr) minmax(255px, .92fr)!important;
+  gap:24px!important;
+  align-items:start!important;
+}
+.app-scholar .left-rail,
+.app-scholar .right-rail {
+  gap:17px!important;
+}
+.app-scholar .profile-summary-card,
+.app-scholar .left-shortcuts,
+.app-scholar .rail-block,
+.app-scholar .feed-post,
+.app-scholar .v18-composer {
+  border:1px solid #e3e9ef!important;
+  border-radius:18px!important;
+  background:#fffefa!important;
+  box-shadow:0 5px 20px rgba(25,49,77,.045)!important;
+}
+.app-scholar .profile-summary-card {
+  overflow:hidden!important;
+  transition:transform .22s ease,box-shadow .22s ease!important;
+}
+.app-scholar .profile-summary-card:hover,
+.app-scholar .rail-block:hover {
+  box-shadow:0 10px 28px rgba(25,49,77,.075)!important;
+}
+.app-scholar .profile-summary-cover {
+  height:100px!important;
+  background-size:cover!important;
+  background-position:center 42%!important;
+  position:relative!important;
+}
+.app-scholar .profile-summary-cover::after {
+  display: none !important;
+  content: none !important;
+}
+.app-scholar .profile-summary-avatar {
+  width:76px!important;
+  height:76px!important;
+  min-width:76px!important;
+  min-height:76px!important;
+  margin:-39px 0 0 18px!important;
+  position:relative!important;
+  z-index:1!important;
+  border:4px solid #fffefa!important;
+  border-radius:50%!important;
+  object-fit:cover!important;
+  box-shadow:0 5px 16px rgba(20,45,75,.16)!important;
+}
+.app-scholar .profile-summary-body {
+  padding:9px 19px 19px!important;
+  gap:7px!important;
+}
+.app-scholar .profile-summary-body b {
+  color:#193653!important;
+  font-size:18px!important;
+  letter-spacing:-.45px!important;
+  line-height:1.25!important;
+}
+.app-scholar .profile-summary-body span {
+  color:#536b84!important;
+  font-size:12px!important;
+  font-weight:650!important;
+}
+.app-scholar .profile-summary-body small {
+  color:#8492a3!important;
+  font-size:11px!important;
+}
+.app-scholar .profile-summary-body button {
+  margin-top:8px!important;
+  padding:10px 13px!important;
+  border:1px solid #dce7f3!important;
+  border-radius:11px!important;
+  background:#f4f8fd!important;
+  color:#245fae!important;
+  font-size:11px!important;
+  font-weight:750!important;
+  transition:background .2s ease,border-color .2s ease,transform .2s ease!important;
+}
+.app-scholar .profile-summary-body button:hover {
+  background:#eaf2fc!important;
+  border-color:#c9dbee!important;
+  transform:translateY(-1px)!important;
+}
+.app-scholar .left-shortcuts {
+  padding:17px 15px!important;
+}
+.app-scholar .left-shortcuts>b {
+  padding:0 8px 10px!important;
+  color:#193653!important;
+  font-size:12px!important;
+  letter-spacing:.01em!important;
+}
+.app-scholar .left-shortcuts button {
+  min-height:41px!important;
+  padding:10px 9px!important;
+  border-radius:10px!important;
+  color:#566d86!important;
+  font-size:11px!important;
+  transition:background .18s ease,color .18s ease,transform .18s ease!important;
+}
+.app-scholar .left-shortcuts button:hover {
+  background:#f0f5fb!important;
+  color:#245fae!important;
+  transform:translateX(2px)!important;
+}
+.app-scholar .left-shortcuts button svg { color:#7890aa!important; }
+
+.app-scholar .feed-column .section-top {
+  margin:2px 0 17px!important;
+  align-items:center!important;
+}
+.app-scholar .feed-column .section-top .overline {
+  color:#8191a4!important;
+  font-size:9px!important;
+  letter-spacing:1.45px!important;
+  font-weight:800!important;
+}
+.app-scholar .feed-column .section-top h2 {
+  margin:5px 0 0!important;
+  color:#193653!important;
+  font-size:23px!important;
+  font-weight:800!important;
+  letter-spacing:-.8px!important;
+}
+.app-scholar .feed-column .section-top>button {
+  min-height:34px!important;
+  padding:7px 10px!important;
+  border-radius:9px!important;
+  color:#2868bd!important;
+  font-size:11px!important;
+}
+.app-scholar .feed-column .section-top>button:hover {
+  background:#edf4fc!important;
+}
+.app-scholar .feed-tabs {
+  margin:0 0 14px!important;
+  padding:0 8px!important;
+  border:1px solid #e3e9ef!important;
+  border-radius:15px 15px 0 0!important;
+  background:#fffefa!important;
+}
+.app-scholar .feed-tabs button {
+  min-width:94px!important;
+  padding:13px 16px 14px!important;
+  color:#718198!important;
+  font-size:12px!important;
+  border-radius:0!important;
+}
+.app-scholar .feed-tabs button.active {
+  color:#214f83!important;
+}
+.app-scholar .feed-tabs button.active:after {
+  height:3px!important;
+  left:13px!important;
+  right:13px!important;
+  border-radius:5px 5px 0 0!important;
+  background:#2868bd!important;
+}
+.app-scholar .v18-composer {
+  margin-bottom:17px!important;
+  padding:17px 18px 10px!important;
+  background:linear-gradient(150deg,#fffefa 0%,#ffffff 100%)!important;
+  transition:border-color .2s ease,box-shadow .2s ease!important;
+}
+.app-scholar .v18-composer:focus-within {
+  border-color:#c9d9ea!important;
+  box-shadow:0 8px 25px rgba(35,85,139,.075)!important;
+}
+.app-scholar .composer-top .avatar {
+  width:44px!important;
+  height:44px!important;
+  border:2px solid #fff!important;
+  box-shadow:0 0 0 1px #e2eaf2!important;
+}
+.app-scholar .composer-prompt {
+  height:49px!important;
+  padding:0 19px!important;
+  border:1px solid #e2e9f0!important;
+  border-radius:13px!important;
+  background:#f7f9fc!important;
+  color:#4c637c!important;
+  font-size:13px!important;
+  font-weight:550!important;
+}
+.app-scholar .composer-prompt:hover,
+.app-scholar .composer-prompt:focus {
+  border-color:#b9cee5!important;
+  background:#fff!important;
+  box-shadow:0 0 0 4px rgba(40,104,189,.075)!important;
+}
+.app-scholar .composer-actions {
+  margin-top:12px!important;
+  padding:10px 0 0 55px!important;
+  border-top:1px solid #edf1f5!important;
+}
+.app-scholar .composer-actions button {
+  min-height:37px!important;
+  border-radius:10px!important;
+  color:#5c7088!important;
+  font-size:11px!important;
+}
+.app-scholar .composer-actions button:hover {
+  background:#f2f6fb!important;
+  color:#245fae!important;
+}
+.app-scholar .composer-actions button:nth-child(3) svg { color:#2868bd!important; }
+
+.app-scholar .feed-post {
+  margin-bottom:17px!important;
+  padding:19px!important;
+  border-radius:17px!important;
+    background: #f4f0f4 !important;
+
+  box-shadow:0 4px 17px rgba(25,49,77,.04)!important;
+  transition:border-color .2s ease,box-shadow .2s ease!important;
+}
+.app-scholar .feed-post:hover {
+  border-color:#d2deea!important;
+  box-shadow:0 8px 25px rgba(25,49,77,.065)!important;
+}
+.app-scholar .feed-author .avatar {
+  width:43px!important;
+  height:43px!important;
+  border-radius:50%!important;
+  object-fit:cover!important;
+  box-shadow:0 0 0 3px #fff,0 0 0 4px #e6edf4!important;
+}
+.app-scholar .feed-author b {
+  color:#193653!important;
+  font-size:13px!important;
+  letter-spacing:-.1px!important;
+}
+.app-scholar .feed-author span { color:#687d94!important; font-size:10px!important; }
+.app-scholar .feed-author small { color:#91a0b0!important; font-size:10px!important; }
+.app-scholar .feed-copy {
+  padding:15px 0 13px!important;
+}
+.app-scholar .feed-copy p {
+  color:#344d68!important;
+  font-size:13px!important;
+  line-height:1.75!important;
+}
+.app-scholar .feed-post .tag {
+  border-radius:7px!important;
+  padding:5px 9px!important;
+  background:#eef4fb!important;
+  color:#426c9d!important;
+}
+.app-scholar .feed-post .feed-photo {
+  max-height:370px!important;
+  border-radius:12px!important;
+  object-fit:cover!important;
+  background:#f1f4f7!important;
+}
+.app-scholar .post-stats {
+  color:#8796a8!important;
+  font-size:10px!important;
+}
+.app-scholar .post-actions {
+  border-top:1px solid #edf1f5!important;
+  padding-top:10px!important;
+}
+.app-scholar .post-actions button {
+  min-height:38px!important;
+  padding:8px 10px!important;
+  border-radius:9px!important;
+  color:#637991!important;
+  font-size:11px!important;
+}
+.app-scholar .post-actions button:hover {
+  background:#f1f6fc!important;
+  color:#245fae!important;
+}
+
+.app-scholar .rail-block {
+  padding:17px 16px!important;
+  margin:0 0 1px!important;
+  border-radius:17px!important;
+  box-shadow:0 4px 17px rgba(25,49,77,.04)!important;
+}
+.app-scholar .rail-heading {
+  align-items:center!important;
+  margin-bottom:12px!important;
+}
+.app-scholar .rail-heading .overline {
+  color:#8796a8!important;
+  font-size:8px!important;
+  letter-spacing:1.25px!important;
+  font-weight:800!important;
+}
+.app-scholar .rail-heading h3 {
+  margin:5px 0 0!important;
+  color:#193653!important;
+  font-size:15px!important;
+  letter-spacing:-.3px!important;
+}
+.app-scholar .rail-heading>button {
+  padding:6px 8px!important;
+  border-radius:8px!important;
+  font-size:10px!important;
+}
+.app-scholar .rail-heading>button:hover { background:#edf4fc!important; }
+.app-scholar .person {
+  gap:10px!important;
+  padding:11px 0!important;
+  border-top:1px solid #edf1f5!important;
+}
+.app-scholar .person .avatar {
+  width:39px!important;
+  height:39px!important;
+  border-radius:50%!important;
+  object-fit:cover!important;
+}
+.app-scholar .person-copy b { color:#25415f!important; font-size:11px!important; }
+.app-scholar .person-copy span { color:#71839a!important; font-size:9px!important; }
+.app-scholar .person-copy small { color:#91a0b0!important; font-size:8px!important; }
+.app-scholar .round-add {
+  width:31px!important;
+  height:31px!important;
+  border:1px solid #dce7f2!important;
+  background:#f4f8fd!important;
+  color:#2868bd!important;
+  transition:background .18s ease,transform .18s ease!important;
+}
+.app-scholar .round-add:hover {
+  background:#e8f1fc!important;
+  transform:translateY(-1px)!important;
+}
+.app-scholar .jobs-rail .opportunity {
+  gap:11px!important;
+  padding:12px 0!important;
+  border-top:1px solid #edf1f5!important;
+}
+.app-scholar .jobs-rail .opportunity>img {
+  width:62px!important;
+  height:62px!important;
+  border-radius:11px!important;
+  object-fit:cover!important;
+  border:1px solid #e7edf3!important;
+}
+.app-scholar .jobs-rail .opp-content>b {
+  color:#294664!important;
+  font-size:10px!important;
+  line-height:1.4!important;
+}
+.app-scholar .jobs-rail .opp-content>span { color:#788ba0!important; font-size:9px!important; }
+.app-scholar .jobs-rail .opp-content strong { color:#547a62!important; font-size:9px!important; }
+.app-scholar .quote-card {
+  border:1px solid #e1e9e2!important;
+  border-radius:17px!important;
+  background:linear-gradient(145deg,#f0f5ef,#e9f0e9)!important;
+  box-shadow:0 4px 17px rgba(25,49,77,.035)!important;
+}
+
+/* Natural document scrolling: avoid the old nested feed/rail scrollbars. */
+
+/* Scholar Home: fixed dashboard with independently scrolling feed */
+@media (min-width: 761px) {
+  .app-scholar {
+    height: 100vh !important;
+    overflow: hidden !important;
+  }
+
+  .app-scholar .layout {
+    height: calc(100vh - 78px) !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    display: flex !important;
+  }
+
+  .app-scholar .main {
+    height: 100% !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .app-scholar .main-inner {
+    flex: 1 !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    padding-bottom: 20px !important;
+  }
+
+  .app-scholar .main-inner > .dashboard-columns {
+    height: 100% !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    align-items: stretch !important;
+  }
+
+  .app-scholar .dashboard-columns > .feed-column {
+    height: 100% !important;
+    min-height: 0 !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5df transparent;
+    padding-right: 8px !important;
+  }
+
+  .app-scholar .dashboard-columns > .left-rail,
+  .app-scholar .dashboard-columns > .right-rail {
+    height: 100% !important;
+    min-height: 0 !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    scrollbar-width: thin;
+  }
+
+
+/* Subtle right-column scrollbar */
+.app-scholar .dashboard-columns > .right-rail {
+  scrollbar-width: thin !important;
+  scrollbar-color: #e9edf1 transparent !important;
+}
+
+.app-scholar .dashboard-columns > .right-rail::-webkit-scrollbar {
+  width: 5px;
+}
+
+.app-scholar .dashboard-columns > .right-rail::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.app-scholar .dashboard-columns > .right-rail::-webkit-scrollbar-thumb {
+  background: #e9edf1;
+  border-radius: 10px;
+}
+
+.app-scholar .dashboard-columns > .right-rail::-webkit-scrollbar-thumb:hover {
+  background: #d5dce3;
+}
+
+
+  .app-scholar .main > footer {
+    flex-shrink: 0 !important;
+  }
+}
+
+@media (max-width:1180px) and (min-width:981px) {
+  .app-scholar .dashboard-columns {
+    grid-template-columns:190px minmax(0,1fr) 235px!important;
+    gap:16px!important;
+  }
+}
+@media (max-width:980px) and (min-width:761px) {
+  .app-scholar .dashboard-columns {
+    grid-template-columns:minmax(0,1fr) 260px!important;
+    gap:17px!important;
+  }
+  .app-scholar .left-rail { display:none!important; }
+}
+@media (max-width:760px) {
+  .app-scholar .main-inner { padding:18px 14px 34px!important; }
+  .app-scholar .dashboard-columns { grid-template-columns:minmax(0,1fr)!important; gap:16px!important; }
+  .app-scholar .left-rail { display:grid!important; grid-template-columns:minmax(0,1fr)!important; }
+  .app-scholar .profile-summary-cover { height:88px!important; }
+  .app-scholar .profile-summary-avatar { width:68px!important;height:68px!important;min-width:68px!important;min-height:68px!important;margin-top:-35px!important; }
+  .app-scholar .feed-column .section-top h2 { font-size:21px!important; }
+  .app-scholar .v18-composer { padding:14px!important; }
+  .app-scholar .composer-actions { padding-left:0!important; }
+  .app-scholar .feed-post { padding:15px!important; }
+  .app-scholar .right-rail { display:grid!important; grid-template-columns:minmax(0,1fr)!important; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .app-scholar .profile-summary-card,
+  .app-scholar .left-shortcuts button,
+  .app-scholar .feed-post,
+  .app-scholar .round-add { transition:none!important; }
+}
+
+/* =========================================
+   RESUME NOTIFICATION — FLOATING TOAST
+========================================= */
+
+.resume-toast {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999999;
+
+  width: min(420px, calc(100% - 32px));
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 16px;
+  background: #fffefa;
+  border: 1px solid #e5eaf0;
+  border-left: 4px solid #e99a35;
+  border-radius: 15px;
+
+  box-shadow: 0 12px 40px rgba(15, 35, 65, 0.18);
+  animation: resumeToastIn 0.3s ease-out;
+}
+
+.resume-toast-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+
+  color: #d88924;
+  background: #fff3df;
+  border-radius: 12px;
+}
+
+.resume-toast-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.resume-toast-content strong {
+  color: #193653;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.resume-toast-content span {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.resume-toast button {
+  border: 0;
+  background: transparent;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.resume-toast button:hover {
+  color: #193653;
+}
+
+@keyframes resumeToastIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -15px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-toast {
+    top: 14px;
+    padding: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resume-toast {
+    animation: none;
+  }
+}
+
+
+
+/* =========================================================
+   KARTA CONNECT — SCHOLAR PROFILE EDITOR POLISH
+   Skills, Achievements & Certifications
+   Scoped to Scholar profile components.
+   ========================================================= */
+
+.app-scholar .kp-card {
+  background: #fffefa !important;
+  border: 1px solid #e5e9ed !important;
+  border-radius: 18px !important;
+  padding: 25px !important;
+  box-shadow: 0 5px 20px rgba(25, 49, 77, .045) !important;
+}
+
+/* Section heading and action buttons */
+.app-scholar .kp-card .kp-section-head {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 16px !important;
+  margin-bottom: 23px !important;
+}
+
+.app-scholar .kp-card .kp-section-head h2 {
+  margin: 0 0 6px !important;
+  color: #193653 !important;
+  font-size: 21px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.55px !important;
+}
+
+.app-scholar .kp-card .kp-section-head p,
+.app-scholar .kp-card .kp-muted {
+  color: #78899d !important;
+  font-size: 12px !important;
+  line-height: 1.65 !important;
+}
+
+.app-scholar .kp-card .kp-activity-actions {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 9px !important;
+}
+
+.app-scholar .kp-card .kp-activity-actions > button:not(.btn) {
+  min-height: 40px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 7px !important;
+  padding: 0 15px !important;
+  border: 1px solid #d9e4f0 !important;
+  border-radius: 10px !important;
+  background: #f7faff !important;
+  color: #285f9d !important;
+  font-size: 12px !important;
+  font-weight: 750 !important;
+  cursor: pointer !important;
+  transition: .2s ease !important;
+}
+
+.app-scholar .kp-card .kp-activity-actions > button:not(.btn):hover {
+  background: #edf4fc !important;
+  border-color: #b9cfe6 !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Skill categories */
+.app-scholar .kp-card .kp-skill-group {
+  margin: 18px 0 !important;
+}
+
+.app-scholar .kp-card .kp-skill-group h3 {
+  margin: 0 0 11px !important;
+  color: #506780 !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  letter-spacing: .25px !important;
+}
+
+.app-scholar .kp-card .kp-skill-list {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 11px !important;
+}
+
+.app-scholar .kp-card .kp-skill-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  min-width: 0 !important;
+  padding: 14px 15px !important;
+  border: 1px solid #e6ebf0 !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+  transition: border-color .2s ease, box-shadow .2s ease !important;
+}
+
+.app-scholar .kp-card .kp-skill-row:hover {
+  border-color: #c9d9eb !important;
+  box-shadow: 0 5px 15px rgba(30, 67, 107, .055) !important;
+}
+
+.app-scholar .kp-card .kp-skill-row b {
+  display: block !important;
+  color: #203e5e !important;
+  font-size: 13px !important;
+}
+
+.app-scholar .kp-card .kp-skill-row small {
+  display: block !important;
+  margin-top: 5px !important;
+  color: #8493a5 !important;
+  font-size: 10px !important;
+}
+
+/* Editable entry cards */
+.app-scholar .kp-card .kp-entry {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 16px !important;
+  margin: 14px 0 !important;
+  padding: 19px !important;
+  border: 1px solid #e4eaf0 !important;
+  border-radius: 14px !important;
+  background: #fff !important;
+  box-shadow: 0 3px 12px rgba(26, 51, 80, .025) !important;
+  transition: border-color .2s ease, box-shadow .2s ease !important;
+}
+
+.app-scholar .kp-card .kp-entry:hover {
+  border-color: #cfdeed !important;
+  box-shadow: 0 7px 20px rgba(26, 51, 80, .055) !important;
+}
+
+.app-scholar .kp-card .kp-entry > div:not(.kp-entry-icon) {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+}
+
+.app-scholar .kp-card .kp-entry-icon {
+  display: grid !important;
+  flex: 0 0 42px !important;
+  width: 42px !important;
+  height: 42px !important;
+  place-items: center !important;
+  border: 1px solid #dce8f5 !important;
+  border-radius: 12px !important;
+  background: #f0f6fd !important;
+  color: #316eae !important;
+}
+
+.app-scholar .kp-card .kp-entry-icon svg {
+  width: 19px !important;
+  height: 19px !important;
+}
+
+/* Form fields */
+.app-scholar .kp-card .kp-field {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 7px !important;
+  margin: 0 0 16px !important;
+  color: #52677f !important;
+  font-size: 11px !important;
+  font-weight: 750 !important;
+}
+
+.app-scholar .kp-card .kp-field input,
+.app-scholar .kp-card .kp-field select,
+.app-scholar .kp-card .kp-field textarea {
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 43px !important;
+  box-sizing: border-box !important;
+  padding: 10px 12px !important;
+  border: 1px solid #dfe6ed !important;
+  border-radius: 9px !important;
+  background: #fbfcfe !important;
+  color: #263f5b !important;
+  font-family: inherit !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  transition: border-color .18s ease, box-shadow .18s ease, background .18s ease !important;
+}
+
+.app-scholar .kp-card .kp-field input:hover,
+.app-scholar .kp-card .kp-field select:hover,
+.app-scholar .kp-card .kp-field textarea:hover {
+  border-color: #bdcfe1 !important;
+}
+
+.app-scholar .kp-card .kp-field input:focus,
+.app-scholar .kp-card .kp-field select:focus,
+.app-scholar .kp-card .kp-field textarea:focus {
+  border-color: #78a2d0 !important;
+  background: #fff !important;
+  box-shadow: 0 0 0 3px rgba(46, 103, 173, .09) !important;
+  outline: none !important;
+}
+
+.app-scholar .kp-card .kp-field textarea {
+  min-height: 95px !important;
+  resize: vertical !important;
+}
+
+/* Two-column and three-column form layouts */
+.app-scholar .kp-card .kp-form-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+}
+
+.app-scholar .kp-card .kp-form-grid .kp-field {
+  min-width: 0 !important;
+}
+
+/* Delete actions */
+.app-scholar .kp-card .kp-entry button:not(.btn) {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 7px !important;
+  min-height: 35px !important;
+  margin-top: 4px !important;
+  padding: 0 11px !important;
+  border: 1px solid #f0dddd !important;
+  border-radius: 8px !important;
+  background: #fff8f8 !important;
+  color: #b65c5c !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: .18s ease !important;
+}
+
+.app-scholar .kp-card .kp-entry button:not(.btn):hover {
+  border-color: #e6bcbc !important;
+  background: #fceeee !important;
+}
+
+/* Certificate upload area */
+.app-scholar .kp-card .kp-certificate-upload {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  margin: 12px 0 17px !important;
+  padding: 14px !important;
+  border: 1px dashed #bdcfe1 !important;
+  border-radius: 11px !important;
+  background: #f8fafd !important;
+}
+
+.app-scholar .kp-card .kp-upload-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  min-height: 38px !important;
+  padding: 0 13px !important;
+  border: 1px solid #d3e1ef !important;
+  border-radius: 9px !important;
+  background: #fff !important;
+  color: #2c659f !important;
+  font-size: 11px !important;
+  font-weight: 750 !important;
+  cursor: pointer !important;
+}
+
+.app-scholar .kp-card .kp-upload-btn input[type="file"] {
+  display: none !important;
+}
+
+.app-scholar .kp-card .kp-certificate-upload a {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  color: #2868ad !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+}
+
+.app-scholar .kp-card .kp-certificate-upload a:hover {
+  text-decoration: underline !important;
+}
+
+/* Empty states and helper text */
+.app-scholar .kp-card .kp-empty {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 9px !important;
+  min-height: 190px !important;
+  margin: 14px 0 !important;
+  padding: 25px !important;
+  border: 1px dashed #d9e3ed !important;
+  border-radius: 13px !important;
+  background: #fafbfd !important;
+  text-align: center !important;
+}
+
+.app-scholar .kp-card .kp-empty > svg {
+  color: #7c9fc4 !important;
+}
+
+.app-scholar .kp-card .kp-empty h3 {
+  margin: 0 !important;
+  color: #294967 !important;
+  font-size: 14px !important;
+}
+
+.app-scholar .kp-card .kp-empty p {
+  max-width: 380px !important;
+  margin: 0 !important;
+  color: #8291a3 !important;
+  font-size: 11px !important;
+  line-height: 1.65 !important;
+}
+
+.app-scholar .kp-card .kp-note {
+  display: block !important;
+  margin-top: 17px !important;
+  padding-top: 13px !important;
+  border-top: 1px solid #edf0f3 !important;
+  color: #8795a5 !important;
+  font-size: 10px !important;
+  line-height: 1.65 !important;
+}
+
+/* Responsive profile editor */
+@media (max-width: 760px) {
+  .app-scholar .kp-card {
+    padding: 16px !important;
+    border-radius: 14px !important;
+  }
+
+  .app-scholar .kp-card .kp-section-head {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+  }
+
+  .app-scholar .kp-card .kp-activity-actions {
+    width: 100% !important;
+  }
+
+  .app-scholar .kp-card .kp-skill-list {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .app-scholar .kp-card .kp-entry {
+    gap: 10px !important;
+    padding: 13px !important;
+  }
+
+  .app-scholar .kp-card .kp-entry-icon {
+    flex-basis: 34px !important;
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+  .app-scholar .kp-card .kp-form-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 0 !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-scholar .kp-card .kp-entry,
+  .app-scholar .kp-card .kp-skill-row,
+  .app-scholar .kp-card .kp-field input,
+  .app-scholar .kp-card .kp-field select,
+  .app-scholar .kp-card .kp-field textarea {
+    transition: none !important;
+  }
+}
+
+/* =========================================================
+   KARTA CONNECT — PROJECT CARDS DESIGN
+   ========================================================= */
+
+.app-scholar .kp-card .kp-project {
+  overflow: hidden !important;
+  margin: 18px 0 !important;
+  border: 1px solid #e1e8f0 !important;
+  border-radius: 16px !important;
+  background: #fff !important;
+  box-shadow: 0 4px 16px rgba(25, 49, 77, .045) !important;
+  transition: border-color .2s ease, box-shadow .2s ease !important;
+}
+
+.app-scholar .kp-card .kp-project:hover {
+  border-color: #c5d7ea !important;
+  box-shadow: 0 9px 24px rgba(25, 49, 77, .075) !important;
+}
+
+/* Project cover */
+.app-scholar .kp-card .kp-project-cover {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  min-height: 105px !important;
+  padding: 22px 25px !important;
+  overflow: hidden !important;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(255,255,255,.17), transparent 30%),
+    linear-gradient(120deg, #142e4d 0%, #245c91 65%, #347eb3 100%) !important;
+  color: #fff !important;
+}
+
+.app-scholar .kp-card .kp-project-cover::after {
+  content: "" !important;
+  position: absolute !important;
+  width: 170px !important;
+  height: 170px !important;
+  right: 65px !important;
+  top: -105px !important;
+  border: 1px solid rgba(255,255,255,.15) !important;
+  border-radius: 50% !important;
+  box-shadow: 0 0 0 22px rgba(255,255,255,.035),
+              0 0 0 45px rgba(255,255,255,.025) !important;
+  pointer-events: none !important;
+}
+
+.app-scholar .kp-card .kp-project-cover svg {
+  width: 28px !important;
+  height: 28px !important;
+  color: #d7e9ff !important;
+}
+
+.app-scholar .kp-card .kp-project-cover span {
+  position: relative !important;
+  z-index: 1 !important;
+  padding: 7px 10px !important;
+  border: 1px solid rgba(255,255,255,.2) !important;
+  border-radius: 7px !important;
+  background: rgba(255,255,255,.1) !important;
+  color: #fff !important;
+  font-size: 9px !important;
+  font-weight: 800 !important;
+  letter-spacing: 1.3px !important;
+}
+
+/* Project content */
+.app-scholar .kp-card .kp-project-body {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 4px 18px !important;
+  padding: 23px !important;
+}
+
+.app-scholar .kp-card .kp-project-body .kp-field {
+  min-width: 0 !important;
+}
+
+.app-scholar .kp-card .kp-project-body .kp-field:nth-child(1),
+.app-scholar .kp-card .kp-project-body .kp-field:nth-child(2),
+.app-scholar .kp-card .kp-project-body > button {
+  grid-column: 1 / -1 !important;
+}
+
+.app-scholar .kp-card .kp-project-body .kp-field textarea {
+  min-height: 105px !important;
+}
+
+/* Project delete action */
+.app-scholar .kp-card .kp-project-body > button {
+  justify-self: start !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  min-height: 36px !important;
+  margin-top: 4px !important;
+  padding: 0 12px !important;
+  border: 1px solid #f0dddd !important;
+  border-radius: 8px !important;
+  background: #fff8f8 !important;
+  color: #b65c5c !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: .2s ease !important;
+}
+
+.app-scholar .kp-card .kp-project-body > button:hover {
+  background: #fceeee !important;
+  border-color: #e6bcbc !important;
+}
+
+/* Projects section heading */
+.app-scholar .kp-card:has(.kp-project) .kp-section-head {
+  margin-bottom: 18px !important;
+}
+
+/* Mobile project layout */
+@media (max-width: 760px) {
+  .app-scholar .kp-card .kp-project-cover {
+    min-height: 82px !important;
+    padding: 16px !important;
+  }
+
+  .app-scholar .kp-card .kp-project-body {
+    grid-template-columns: minmax(0, 1fr) !important;
+    padding: 16px !important;
+  }
+
+  .app-scholar .kp-card .kp-project-body .kp-field,
+  .app-scholar .kp-card .kp-project-body .kp-field:nth-child(1),
+  .app-scholar .kp-card .kp-project-body .kp-field:nth-child(2),
+  .app-scholar .kp-card .kp-project-body > button {
+    grid-column: 1 !important;
+  }
+}
+
+
+/* KARTA — PREMIUM SKILLS CARDS */
+
+.app-scholar .kp-skills-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 20px 0 24px;
+}
+
+.app-scholar .kp-skills-summary > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 15px;
+  border: 1px solid #e7edf3;
+  border-radius: 12px;
+  background: #f8fafd;
+}
+
+.app-scholar .kp-skills-summary strong {
+  color: #193957;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.app-scholar .kp-skills-summary span {
+  color: #8291a3;
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.app-scholar .kp-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.app-scholar .kp-skill-card {
+  min-width: 0;
+  padding: 17px;
+  border: 1px solid #e4eaf1;
+  border-radius: 15px;
+  background: #fff;
+  transition: .2s ease;
+}
+
+.app-scholar .kp-skill-card:hover {
+  border-color: #b9cfe5;
+  box-shadow: 0 8px 22px rgba(25, 49, 77, .065);
+  transform: translateY(-2px);
+}
+
+.app-scholar .kp-skill-card-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.app-scholar .kp-skill-symbol {
+  display: grid;
+  place-items: center;
+  width: 37px;
+  height: 37px;
+  flex-shrink: 0;
+  border-radius: 11px;
+  background: #eef5fd;
+  color: #3475b5;
+}
+
+.app-scholar .kp-skill-category {
+  padding: 6px 9px;
+  border-radius: 20px;
+  background: #edf4fc;
+  color: #326a9f;
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.app-scholar .kp-skill-category.category-backend {
+  background: #f1efff;
+  color: #7160b4;
+}
+
+.app-scholar .kp-skill-category.category-professional {
+  background: #fff3e9;
+  color: #b66b31;
+}
+
+.app-scholar .kp-skill-category.category-programming {
+  background: #edf7f1;
+  color: #39845c;
+}
+
+.app-scholar .kp-skill-delete {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin-left: auto;
+  border: 1px solid #f0e1e1;
+  border-radius: 9px;
+  background: #fffafa;
+  color: #b65c5c;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.app-scholar .kp-skill-delete:hover {
+  background: #fceeee;
+  border-color: #e6bcbc;
+}
+
+.app-scholar .kp-skill-card .kp-field {
+  margin-bottom: 13px !important;
+}
+
+.app-scholar .kp-skill-level {
+  margin-top: 4px;
+  padding-top: 13px;
+  border-top: 1px solid #edf0f4;
+}
+
+.app-scholar .kp-skill-level-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.app-scholar .kp-skill-level-heading span {
+  color: #8492a3;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.app-scholar .kp-skill-level-heading strong {
+  color: #285e94;
+  font-size: 11px;
+}
+
+.app-scholar .kp-skill-meter {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  margin-bottom: 11px;
+}
+
+.app-scholar .kp-skill-meter span {
+  height: 6px;
+  border-radius: 10px;
+  background: #e9eef3;
+}
+
+.app-scholar .kp-skill-meter span.filled {
+  background: linear-gradient(90deg, #2866a5, #4d91cc);
+}
+
+.app-scholar .kp-skill-level select {
+  width: 100%;
+  min-height: 37px;
+  padding: 8px 10px;
+  border: 1px solid #e0e7ef;
+  border-radius: 8px;
+  background: #fafcff;
+  color: #36536f;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.app-scholar .kp-skills-panel .kp-empty button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: 0;
+  border-radius: 9px;
+  background: #245e99;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  .app-scholar .kp-skills-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .app-scholar .kp-skills-summary {
+    gap: 7px;
+  }
+
+  .app-scholar .kp-skills-summary > div {
+    padding: 11px;
+  }
+
+  .app-scholar .kp-skills-summary strong {
+    font-size: 19px;
+  }
+}
+
+
+/* Professional Experience Timeline */
+.app-scholar .kp-experience-panel {
+  padding: 25px;
+}
+
+.app-scholar .kp-experience-subtitle {
+  margin: 6px 0 0;
+  color: #77869a;
+  font-size: 13px;
+}
+
+.app-scholar .kp-experience-list {
+  display: grid;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.app-scholar .kp-experience-card {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 15px;
+  padding: 22px;
+  border: 1px solid #e7ebf1;
+  border-radius: 15px;
+  background: #fffefa;
+}
+
+.app-scholar .kp-experience-timeline {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.app-scholar .kp-experience-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  color: #2457a7;
+  background: #eaf1ff;
+  border-radius: 12px;
+}
+
+.app-scholar .kp-experience-line {
+  position: absolute;
+  top: 48px;
+  bottom: -42px;
+  width: 2px;
+  background: #e5eaf2;
+}
+
+.app-scholar .kp-experience-content {
+  min-width: 0;
+}
+
+.app-scholar .kp-experience-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.app-scholar .kp-experience-index {
+  color: #d97736;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.app-scholar .kp-experience-card-head h3 {
+  margin: 6px 0 3px;
+  color: #173451;
+  font-size: 18px;
+  font-weight: 750;
+}
+
+.app-scholar .kp-experience-company {
+  margin: 0;
+  color: #526b85;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.app-scholar .kp-experience-delete {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  color: #b45353;
+  background: #fff1ef;
+  border: 0;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.app-scholar .kp-experience-delete:hover {
+  background: #ffe2df;
+}
+
+.app-scholar .kp-experience-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px 16px;
+  margin: 13px 0 20px;
+  color: #718096;
+  font-size: 12px;
+}
+
+.app-scholar .kp-experience-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.app-scholar .kp-experience-meta .kp-current-role {
+  padding: 4px 9px;
+  color: #16845c;
+  background: #e9f7ef;
+  border-radius: 20px;
+  font-weight: 650;
+}
+
+.app-scholar .kp-experience-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  padding-top: 17px;
+  border-top: 1px solid #edf0f4;
+}
+
+.app-scholar .kp-experience-wide {
+  grid-column: 1 / -1;
+}
+
+.app-scholar .kp-experience-fields .kp-field small {
+  display: block;
+  margin-top: 5px;
+  color: #8995a5;
+  font-size: 11px;
+}
+
+.app-scholar .kp-experience-current {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #52677e;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.app-scholar .kp-experience-current input {
+  accent-color: #2457a7;
+  width: 16px;
+  height: 16px;
+}
+
+.app-scholar .kp-experience-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 42px 20px;
+  margin-top: 20px;
+  text-align: center;
+  background: #faf9f5;
+  border: 1px dashed #d8dfeb;
+  border-radius: 15px;
+}
+
+.app-scholar .kp-experience-empty-icon {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  color: #2457a7;
+  background: #eaf1ff;
+  border-radius: 16px;
+}
+
+.app-scholar .kp-experience-empty h3 {
+  margin: 15px 0 5px;
+  color: #173451;
+  font-size: 16px;
+}
+
+.app-scholar .kp-experience-empty p {
+  max-width: 440px;
+  margin: 0 0 17px;
+  color: #77869a;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.app-scholar .kp-experience-empty button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 15px;
+  color: #fff;
+  background: #2457a7;
+  border: 0;
+  border-radius: 9px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+@media (max-width: 650px) {
+  .app-scholar .kp-experience-panel {
+    padding: 17px;
+  }
+
+  .app-scholar .kp-experience-card {
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .app-scholar .kp-experience-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .app-scholar .kp-experience-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .app-scholar .kp-experience-wide {
+    grid-column: auto;
+  }
+
+  .app-scholar .kp-experience-panel .kp-section-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* Achievements and Certifications Showcase */
+
+.app-scholar .kp-achievements-panel,
+.app-scholar .kp-certifications-panel {
+  padding: 25px;
+}
+
+.app-scholar .kp-achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px;
+  margin-top: 24px;
+}
+
+.app-scholar .kp-achievement-card {
+  overflow: hidden;
+  border: 1px solid #e7ebf1;
+  border-radius: 15px;
+  background: #fffefa;
+}
+
+.app-scholar .kp-achievement-top {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 16px 17px;
+  background: linear-gradient(110deg, #fff4e9, #f4f6fc);
+  border-bottom: 1px solid #edf0f4;
+}
+
+.app-scholar .kp-achievement-icon,
+.app-scholar .kp-certification-symbol {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  color: #bd742d;
+  background: #fff0d9;
+  border-radius: 12px;
+}
+
+.app-scholar .kp-achievement-number,
+.app-scholar .kp-certification-label {
+  color: #9a754f;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.app-scholar .kp-achievement-delete {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  margin-left: auto;
+  flex-shrink: 0;
+  color: #b45353;
+  background: #fff1ef;
+  border: 0;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.app-scholar .kp-achievement-delete:hover {
+  background: #ffe2df;
+}
+
+.app-scholar .kp-achievement-delete:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.app-scholar .kp-achievement-preview {
+  padding: 19px 18px 16px;
+}
+
+.app-scholar .kp-achievement-category {
+  display: inline-flex;
+  padding: 5px 10px;
+  color: #2457a7;
+  background: #eaf1ff;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.app-scholar .kp-achievement-preview h3 {
+  margin: 12px 0 5px;
+  color: #173451;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.app-scholar .kp-achievement-preview > p {
+  margin: 0;
+  color: #64758a;
+  font-size: 12px;
+}
+
+.app-scholar .kp-achievement-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  color: #9a754f;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.app-scholar .kp-achievement-preview .kp-achievement-description {
+  margin-top: 12px;
+  color: #65758a;
+  line-height: 1.6;
+}
+
+.app-scholar .kp-achievement-editor {
+  display: grid;
+  gap: 14px;
+  padding: 17px;
+  border-top: 1px solid #edf0f4;
+}
+
+.app-scholar .kp-achievement-empty,
+.app-scholar .kp-certification-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 42px 20px;
+  margin-top: 22px;
+  text-align: center;
+  background: #faf9f5;
+  border: 1px dashed #d8dfeb;
+  border-radius: 15px;
+}
+
+.app-scholar .kp-achievement-empty > svg,
+.app-scholar .kp-certification-empty-icon {
+  color: #bd742d;
+}
+
+.app-scholar .kp-achievement-empty h3,
+.app-scholar .kp-certification-empty h3 {
+  margin: 13px 0 5px;
+  color: #173451;
+  font-size: 16px;
+}
+
+.app-scholar .kp-achievement-empty p,
+.app-scholar .kp-certification-empty p {
+  max-width: 440px;
+  margin: 0 0 17px;
+  color: #77869a;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.app-scholar .kp-achievement-empty button,
+.app-scholar .kp-certification-empty button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 15px;
+  color: white;
+  background: #2457a7;
+  border: 0;
+  border-radius: 9px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+/* Certification cards */
+
+.app-scholar .kp-certification-list {
+  display: grid;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.app-scholar .kp-certification-card {
+  padding: 20px;
+  border: 1px solid #e5eaf1;
+  border-radius: 15px;
+  background: #fffefa;
+}
+
+.app-scholar .kp-certification-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.app-scholar .kp-certification-heading-copy {
+  min-width: 0;
+  flex: 1;
+}
+
+.app-scholar .kp-certification-heading-copy h3 {
+  margin: 5px 0 3px;
+  color: #173451;
+  font-size: 17px;
+}
+
+.app-scholar .kp-certification-heading-copy p {
+  margin: 0;
+  color: #64758a;
+  font-size: 13px;
+}
+
+.app-scholar .kp-certification-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px 17px;
+  margin: 17px 0;
+  color: #718096;
+  font-size: 12px;
+}
+
+.app-scholar .kp-certification-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.app-scholar .kp-certification-meta .kp-certification-uploaded {
+  color: #16845c;
+  font-weight: 650;
+}
+
+.app-scholar .kp-certification-fields {
+  display: grid;
+  gap: 14px;
+  padding-top: 17px;
+  border-top: 1px solid #edf0f4;
+}
+
+.app-scholar .kp-certification-wide {
+  grid-column: 1 / -1;
+}
+
+.app-scholar .kp-certification-document {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 13px;
+  margin-top: 19px;
+  background: #f6f8fb;
+  border: 1px solid #e8edf4;
+  border-radius: 12px;
+}
+
+.app-scholar .kp-certification-file-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  color: #2457a7;
+  background: #eaf1ff;
+  border-radius: 10px;
+}
+
+.app-scholar .kp-certification-file-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 130px;
+}
+
+.app-scholar .kp-certification-file-copy strong {
+  overflow-wrap: anywhere;
+  color: #29435e;
+  font-size: 12px;
+}
+
+.app-scholar .kp-certification-file-copy span {
+  color: #8491a2;
+  font-size: 11px;
+}
+
+.app-scholar .kp-certification-preview {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #2457a7;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.app-scholar .kp-certification-preview:hover {
+  text-decoration: underline;
+}
+
+.app-scholar .kp-certification-document .kp-upload-btn {
+  flex-shrink: 0;
+}
+
+@media (max-width: 700px) {
+  .app-scholar .kp-achievements-panel,
+  .app-scholar .kp-certifications-panel {
+    padding: 16px;
+  }
+
+  .app-scholar .kp-achievement-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app-scholar .kp-certification-card {
+    padding: 14px;
+  }
+
+  .app-scholar .kp-certification-document {
+    align-items: flex-start;
+  }
+
+  .app-scholar .kp-certification-document .kp-upload-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .app-scholar .kp-achievements-panel .kp-section-head,
+  .app-scholar .kp-certifications-panel .kp-section-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   KARTA CONNECT — SCHOLAR PROFILE
+   Unified Premium Neutral Design System
+   ===================================================== */
+
+.app-scholar .kp-page {
+  --kp-bg: #f7f7f5;
+  --kp-surface: #ffffff;
+  --kp-surface-soft: #fafaf9;
+  --kp-border: #dededb;
+  --kp-border-strong: #c9c9c4;
+  --kp-heading: #20252d;
+  --kp-text: #454b54;
+  --kp-muted: #858991;
+  --kp-primary: #26364b;
+
+  background: var(--kp-bg);
+  color: var(--kp-text);
+}
+
+/* Profile cover */
+.app-scholar .kp-hero {
+  position: relative;
+  min-height: 210px;
+  border: 1px solid var(--kp-border);
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #e8e8e5;
+  background-size: cover;
+  background-position: center;
+}
+
+.app-scholar .kp-cover-edit {
+  border: 1px solid #d7d7d2;
+  border-radius: 5px;
+  background: rgba(255,255,255,.94);
+  color: #30343a;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+
+/* Profile identity */
+.app-scholar .kp-identity {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 24px;
+  margin-bottom: 20px;
+  background: #fff;
+  border: 1px solid var(--kp-border);
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(20,25,30,.025);
+}
+
+.app-scholar .kp-avatar-wrap {
+  flex-shrink: 0;
+}
+
+.app-scholar .kp-identity-copy {
+  min-width: 0;
+}
+
+.app-scholar .kp-identity-copy h1 {
+  color: var(--kp-heading);
+  font-size: 27px;
+  font-weight: 750;
+  letter-spacing: -.8px;
+}
+
+.app-scholar .kp-identity-copy p {
+  color: #555b64;
+  font-size: 14px;
+}
+
+.app-scholar .kp-identity-copy span,
+.app-scholar .kp-identity-copy small {
+  color: var(--kp-muted);
+  font-size: 12px;
+}
+
+.app-scholar .kp-identity-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-left: auto;
+}
+
+/* Buttons */
+.app-scholar .kp-page button,
+.app-scholar .kp-page .kp-upload-btn {
+  transition: background .18s ease, border-color .18s ease,
+              box-shadow .18s ease, transform .18s ease;
+}
+
+.app-scholar .kp-page .kp-identity-actions button,
+.app-scholar .kp-page .kp-section-head button,
+.app-scholar .kp-page .kp-activity-actions button,
+.app-scholar .kp-page .kp-upload-btn {
+  border-radius: 5px;
+}
+
+.app-scholar .kp-page button:hover {
+  transform: translateY(-1px);
+}
+
+/* Profile strength */
+.app-scholar .kp-strength {
+  padding: 22px;
+  margin-bottom: 20px;
+  background: #fff;
+  border: 1px solid var(--kp-border);
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(20,25,30,.025);
+}
+
+.app-scholar .kp-strength-head b {
+  color: var(--kp-heading);
+  font-size: 16px;
+  font-weight: 750;
+}
+
+.app-scholar .kp-strength-head span,
+.app-scholar .kp-checklist {
+  color: var(--kp-muted);
+  font-size: 12px;
+}
+
+.app-scholar .kp-strength-head strong {
+  color: var(--kp-heading);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.app-scholar .kp-progress {
+  height: 7px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #e9e9e6;
+}
+
+.app-scholar .kp-progress i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #454d58;
+}
+
+/* Profile editor */
+.app-scholar .kp-editor {
+  padding: 25px;
+  margin-bottom: 20px;
+  background: #fff;
+  border: 1px solid var(--kp-border);
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(20,25,30,.025);
+}
+
+.app-scholar .kp-editor h2 {
+  color: var(--kp-heading);
+  font-size: 21px;
+  font-weight: 750;
+}
+
+.app-scholar .kp-editor .overline {
+  color: #858991;
+  letter-spacing: 1.2px;
+}
+
+.app-scholar .kp-form-grid {
+  gap: 17px;
+}
+
+.app-scholar .kp-field {
+  color: #555b64;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.app-scholar .kp-field input,
+.app-scholar .kp-field select,
+.app-scholar .kp-field textarea,
+.app-scholar .kp-card .kp-field input,
+.app-scholar .kp-card .kp-field select,
+.app-scholar .kp-card .kp-field textarea {
+  min-height: 43px;
+  padding: 11px 13px;
+  color: #30343a;
+  background: #fff;
+  border: 1px solid #d7d7d2;
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+.app-scholar .kp-field input:focus,
+.app-scholar .kp-field select:focus,
+.app-scholar .kp-field textarea:focus,
+.app-scholar .kp-card .kp-field input:focus,
+.app-scholar .kp-card .kp-field select:focus,
+.app-scholar .kp-card .kp-field textarea:focus {
+  outline: none;
+  border-color: #777d85;
+  box-shadow: 0 0 0 3px rgba(50,55,60,.07);
+}
+
+/* Profile tabs */
+.app-scholar .kp-tabs {
+  display: flex;
+  gap: 5px;
+  overflow-x: auto;
+  margin: 20px 0;
+  padding: 5px;
+  background: #fff;
+  border: 1px solid var(--kp-border);
+  border-radius: 5px;
+  scrollbar-width: thin;
+}
+
+.app-scholar .kp-tabs button {
+  flex-shrink: 0;
+  padding: 12px 17px;
+  color: #777d85;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.app-scholar .kp-tabs button:hover {
+  color: #252a31;
+  background: #f4f4f2;
+}
+
+.app-scholar .kp-tabs button.active {
+  color: #20252d;
+  background: #f0f0ed;
+  border-color: #deded9;
+  font-weight: 800;
+}
+
+/* Main profile cards — remove all top accent strips */
+.app-scholar .kp-content .kp-main > .kp-card,
+.app-scholar .kp-content .kp-main > .kp-card:hover {
+  position: relative;
+  overflow: hidden;
+  padding: 25px;
+  margin-bottom: 18px;
+  background: #fff;
+  border: 1px solid var(--kp-border);
+  border-radius: 5px;
+  box-shadow: 0 2px 9px rgba(20,25,30,.025);
+  transform: none;
+}
+
+.app-scholar .kp-content .kp-main > .kp-card::before,
+.app-scholar .kp-resume-panel::before {
+  display: none !important;
+  content: none !important;
+}
+
+.app-scholar .kp-content .kp-main > .kp-card:hover {
+  border-color: var(--kp-border-strong);
+  box-shadow: 0 4px 13px rgba(20,25,30,.045);
+}
+
+/* Consistent section headings */
+.app-scholar .kp-card .kp-section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 0 0 17px;
+  margin: 0 0 20px;
+  background: transparent;
+  border-bottom: 1px solid #e8e8e5;
+}
+
+.app-scholar .kp-card .kp-section-head h2 {
+  margin: 0;
+  color: var(--kp-heading);
+  font-size: 20px;
+  font-weight: 750;
+  letter-spacing: -.45px;
+}
+
+.app-scholar .kp-card .kp-section-head p {
+  margin-top: 5px;
+  color: var(--kp-muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Inner cards: one consistent border system */
+.app-scholar .kp-skill-card,
+.app-scholar .kp-project,
+.app-scholar .kp-experience-card,
+.app-scholar .kp-achievement-card,
+.app-scholar .kp-certification-card,
+.app-scholar .kp-resume-card {
+  min-width: 0;
+  background: #fff !important;
+  border: 1px solid #dededb !important;
+  border-radius: 5px !important;
+  border-top: 1px solid #dededb !important;
+  border-left: 1px solid #dededb !important;
+  box-shadow: 0 2px 8px rgba(20,25,30,.025) !important;
+  transform: none;
+}
+
+.app-scholar .kp-skill-card:hover,
+.app-scholar .kp-project:hover,
+.app-scholar .kp-experience-card:hover,
+.app-scholar .kp-achievement-card:hover,
+.app-scholar .kp-certification-card:hover,
+.app-scholar .kp-resume-card:hover {
+  border-color: #bfc0bc !important;
+  box-shadow: 0 5px 14px rgba(20,25,30,.055) !important;
+  transform: translateY(-1px);
+}
+
+/* Skill section */
+.app-scholar .kp-skills-summary > div {
+  background: #fafaf9;
+  border: 1px solid #e2e2de;
+  border-radius: 5px;
+}
+
+.app-scholar .kp-skills-summary strong,
+.app-scholar .kp-skill-card h3 {
+  color: var(--kp-heading);
+}
+
+.app-scholar .kp-skill-symbol,
+.app-scholar .kp-skill-category,
+.app-scholar .kp-skill-category.category-backend,
+.app-scholar .kp-skill-category.category-professional,
+.app-scholar .kp-skill-category.category-programming {
+  color: #555b64 !important;
+  background: #f1f1ef !important;
+  border: 1px solid #e2e2de;
+  border-radius: 4px;
+}
+
+.app-scholar .kp-skill-meter span.filled {
+  background: #555b64;
+}
+
+/* Project section */
+.app-scholar .kp-project {
+  overflow: hidden;
+}
+
+.app-scholar .kp-project-cover {
+  min-height: 95px;
+  color: #30343a !important;
+  background: #f0f0ed !important;
+  border: 0 !important;
+  border-bottom: 1px solid #dededb !important;
+}
+
+.app-scholar .kp-project-cover::after {
+  display: none !important;
+}
+
+.app-scholar .kp-project-cover svg,
+.app-scholar .kp-project-cover span {
+  color: #454b54 !important;
+}
+
+.app-scholar .kp-project-cover span {
+  background: #fff !important;
+  border: 1px solid #dededb !important;
+  border-radius: 4px;
+}
+
+.app-scholar .kp-project-body {
+  background: #fff !important;
+}
+
+/* Experience section */
+.app-scholar .kp-experience-card {
+  display: grid;
+}
+
+.app-scholar .kp-experience-icon,
+.app-scholar .kp-experience-empty-icon {
+  color: #454b54 !important;
+  background: #f0f0ed !important;
+  border: 1px solid #dededb;
+  border-radius: 5px;
+}
+
+.app-scholar .kp-experience-index {
+  color: #858991 !important;
+}
+
+.app-scholar .kp-experience-card-head h3,
+.app-scholar .kp-experience-company {
+  color: #30343a !important;
+}
+
+.app-scholar .kp-experience-line {
+  background: #dededb;
+}
+
+/* Achievements section */
+.app-scholar .kp-achievement-top {
+  background: #f7f7f5 !important;
+  border-bottom: 1px solid #e4e4e0;
+}
+
+.app-scholar .kp-achievement-icon,
+.app-scholar .kp-certification-symbol {
+  color: #454b54 !important;
+  background: #efefec !important;
+  border: 1px solid #dededb;
+  border-radius: 5px;
+}
+
+.app-scholar .kp-achievement-number,
+.app-scholar .kp-certification-label {
+  color: #858991 !important;
+}
+
+.app-scholar .kp-achievement-card h3 {
+  width: fit-content;
+  padding: 0 !important;
+  margin: 8px 0 12px;
+  color: #252a31 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  font-size: 16px;
+  font-weight: 750;
+}
+
+/* Certifications */
+.app-scholar .kp-certification-card h3 {
+  color: #252a31 !important;
+}
+
+.app-scholar .kp-certification-file-icon {
+  color: #454b54 !important;
+  background: #f0f0ed !important;
+  border: 1px solid #dededb;
+  border-radius: 5px;
+}
+
+.app-scholar .kp-certification-document {
+  background: #fafaf9;
+  border: 1px solid #e2e2de;
+  border-radius: 5px;
+}
+
+/* Resume manager */
+.app-scholar .kp-resume-panel {
+  padding: 25px !important;
+  background: #fff !important;
+  border: 1px solid var(--kp-border) !important;
+  border-radius: 5px !important;
+  box-shadow: 0 2px 9px rgba(20,25,30,.025);
+}
+
+.app-scholar .kp-resume-panel > .kp-section-head {
+  padding: 0 0 17px !important;
+  background: transparent !important;
+  border-bottom: 1px solid #e8e8e5 !important;
+}
+
+.app-scholar .kp-resume-panel .kp-section-head h2,
+.app-scholar .kp-resume-card-content h3,
+.app-scholar .kp-resume-empty h3 {
+  color: #252a31 !important;
+}
+
+.app-scholar .kp-resume-info {
+  color: #555b64;
+  background: #f7f7f5;
+  border: 1px solid #e2e2de;
+  border-radius: 5px;
+}
+
+.app-scholar .kp-resume-file-icon,
+.app-scholar .kp-resume-file-icon.doc,
+.app-scholar .kp-resume-file-icon.docx,
+.app-scholar .kp-resume-empty-icon {
+  color: #454b54;
+  background: #f0f0ed;
+  border: 1px solid #dededb;
+  border-radius: 5px;
+}
+
+.app-scholar .kp-resume-primary-badge {
+  color: #454b54;
+  background: #eeeeeb;
+  border: 1px solid #dcdcd7;
+  border-radius: 4px;
+}
+
+.app-scholar .kp-resume-card.is-primary {
+  background: #fff !important;
+  border: 1px solid #c9c9c4 !important;
+}
+
+.app-scholar .kp-resume-card-actions {
+  border-top: 1px solid #e8e8e5;
+}
+
+.app-scholar .kp-resume-primary-btn,
+.app-scholar .kp-resume-primary-note,
+.app-scholar .kp-resume-document-actions a {
+  color: #39424e;
+}
+
+.app-scholar .kp-resume-empty {
+  background: #fafaf9;
+  border: 1px dashed #c9c9c4;
+  border-radius: 5px;
+}
+
+/* Academic facts and timeline */
+.app-scholar .kp-facts > div {
+  padding: 15px;
+  background: #fafaf9;
+  border: 1px solid #e5e5e1;
+  border-radius: 5px;
+}
+
+.app-scholar .kp-facts small {
+  color: #858991;
+}
+
+.app-scholar .kp-facts b,
+.app-scholar .kp-timeline h3,
+.app-scholar .kp-timeline b {
+  color: #30343a;
+}
+
+/* Empty states and helper text */
+.app-scholar .kp-empty,
+.app-scholar .kp-experience-empty {
+  background: #fafaf9;
+  border: 1px dashed #d2d2cd;
+  border-radius: 5px;
+}
+
+.app-scholar .kp-empty > svg {
+  color: #777d85 !important;
+}
+
+.app-scholar .kp-note,
+.app-scholar .kp-muted {
+  color: #858991;
+}
+
+/* Toast — remove coloured side accent */
+.app-scholar .resume-toast {
+  background: #fff;
+  border: 1px solid #dededb;
+  border-left: 1px solid #dededb;
+  border-radius: 6px;
+}
+
+.app-scholar .resume-toast-icon {
+  color: #454b54;
+  background: #f0f0ed;
+  border-radius: 5px;
+}
+
+/* Alumni status panel */
+.app-scholar .alumni-request-card,
+.app-scholar .alumni-request-form {
+  background: #fff;
+  border: 1px solid var(--kp-border);
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(20,25,30,.025);
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+  .app-scholar .kp-identity {
+    flex-wrap: wrap;
+  }
+
+  .app-scholar .kp-identity-actions {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .app-scholar .kp-hero {
+    min-height: 145px;
+  }
+
+  .app-scholar .kp-identity {
+    align-items: flex-start;
+    gap: 14px;
+    padding: 17px;
+  }
+
+  .app-scholar .kp-identity-copy h1 {
+    font-size: 21px;
+  }
+
+  .app-scholar .kp-identity-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .app-scholar .kp-strength,
+  .app-scholar .kp-editor,
+  .app-scholar .kp-content .kp-main > .kp-card,
+  .app-scholar .kp-resume-panel {
+    padding: 16px !important;
+  }
+
+  .app-scholar .kp-content .kp-main > .kp-card .kp-section-head {
+    align-items: flex-start;
+  }
+
+  .app-scholar .kp-skills-grid,
+  .app-scholar .kp-achievement-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .app-scholar .kp-form-grid,
+  .app-scholar .kp-experience-fields {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .app-scholar .kp-tabs {
+    gap: 3px;
+    padding: 4px;
+  }
+
+  .app-scholar .kp-tabs button {
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-scholar .kp-identity-actions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .app-scholar .kp-resume-grid {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 0;
+  }
+
+  .app-scholar .kp-resume-info {
+    margin: 14px 0;
+  }
+
+  .app-scholar .kp-resume-empty {
+    margin: 0 0 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-scholar .kp-page *,
+  .app-scholar .kp-page *::before,
+  .app-scholar .kp-page *::after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+  }
+}
+
+
+
+/* =========================================
+   KARTA — MY RESUMES (MATCH CURRENT JSX)
+========================================= */
+
+.app-scholar #kp-resumes {
+  background: #fff !important;
+  border: 1px solid #dedede !important;
+  border-radius: 12px !important;
+  padding: 24px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.035) !important;
+  overflow: hidden;
+}
+
+.app-scholar #kp-resumes > .kp-section-head {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 14px !important;
+  padding: 0 0 18px !important;
+  margin: 0 0 16px !important;
+  border-bottom: 1px solid #e8e8e8 !important;
+  background: #fff !important;
+}
+
+.app-scholar #kp-resumes .kp-section-head h2 {
+  margin: 0 !important;
+  color: #202020 !important;
+  font-size: 21px !important;
+  font-weight: 750 !important;
+}
+
+.app-scholar #kp-resumes > .kp-muted {
+  display: block !important;
+  margin: 0 0 18px !important;
+  color: #777 !important;
+  font-size: 12px !important;
+  line-height: 1.7 !important;
+}
+
+/* Resume upload button */
+.app-scholar #kp-resumes .kp-upload-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  min-height: 40px !important;
+  padding: 0 15px !important;
+  border: 1px solid #333 !important;
+  border-radius: 7px !important;
+  background: #252525 !important;
+  color: #fff !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+}
+
+.app-scholar #kp-resumes .kp-upload-btn:hover {
+  background: #444 !important;
+}
+
+.app-scholar #kp-resumes .kp-upload-btn input[type="file"] {
+  display: none !important;
+}
+
+/* Individual resume row */
+.app-scholar #kp-resumes .kp-resume-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  min-width: 0 !important;
+  margin: 12px 0 !important;
+  padding: 16px !important;
+  border: 1px solid #e2e2e2 !important;
+  border-radius: 9px !important;
+  background: #fff !important;
+  transition: border-color .2s ease, box-shadow .2s ease !important;
+}
+
+.app-scholar #kp-resumes .kp-resume-row:hover {
+  border-color: #aaa !important;
+  box-shadow: 0 4px 13px rgba(0, 0, 0, .045) !important;
+}
+
+.app-scholar #kp-resumes .kp-resume-row > svg {
+  flex: 0 0 38px !important;
+  width: 38px !important;
+  height: 42px !important;
+  padding: 9px !important;
+  border: 1px solid #e2e2e2 !important;
+  border-radius: 7px !important;
+  background: #f7f7f7 !important;
+  color: #444 !important;
+}
+
+.app-scholar #kp-resumes .kp-resume-row > div {
+  display: flex !important;
+  flex: 1 1 auto !important;
+  flex-direction: column !important;
+  gap: 5px !important;
+  min-width: 0 !important;
+}
+
+.app-scholar #kp-resumes .kp-resume-row b {
+  overflow: hidden !important;
+  color: #292929 !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.app-scholar #kp-resumes .kp-resume-row small {
+  color: #858585 !important;
+  font-size: 10px !important;
+}
+
+/* Row actions */
+.app-scholar #kp-resumes .kp-resume-row button,
+.app-scholar #kp-resumes .kp-resume-row a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  min-height: 34px !important;
+  padding: 0 11px !important;
+  border: 1px solid #dedede !important;
+  border-radius: 6px !important;
+  background: #fff !important;
+  color: #333 !important;
+  font-size: 11px !important;
+  font-weight: 650 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+}
+
+.app-scholar #kp-resumes .kp-resume-row button:hover,
+.app-scholar #kp-resumes .kp-resume-row a:hover {
+  border-color: #999 !important;
+  background: #f7f7f7 !important;
+}
+
+.app-scholar #kp-resumes .kp-resume-row button:disabled {
+  opacity: .5 !important;
+  cursor: not-allowed !important;
+}
+
+/* Primary resume label */
+.app-scholar #kp-resumes .kp-resume-row > .tag {
+  border: 1px solid #d8d8d8 !important;
+  border-radius: 5px !important;
+  background: #f5f5f5 !important;
+  color: #333 !important;
+  font-size: 10px !important;
+  font-weight: 750 !important;
+}
+
+/* Empty state and note */
+.app-scholar #kp-resumes .kp-empty {
+  margin: 15px 0 !important;
+  padding: 30px 18px !important;
+  border: 1px dashed #d5d5d5 !important;
+  border-radius: 9px !important;
+  background: #fafafa !important;
+  color: #777 !important;
+  text-align: center !important;
+}
+
+.app-scholar #kp-resumes .kp-note {
+  display: block !important;
+  margin-top: 18px !important;
+  padding-top: 14px !important;
+  border-top: 1px solid #ededed !important;
+  color: #888 !important;
+  font-size: 10px !important;
+  line-height: 1.7 !important;
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  .app-scholar #kp-resumes {
+    padding: 16px !important;
+  }
+
+  .app-scholar #kp-resumes > .kp-section-head {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+  }
+
+  .app-scholar #kp-resumes .kp-resume-row {
+    align-items: flex-start !important;
+    flex-wrap: wrap !important;
+  }
+
+  .app-scholar #kp-resumes .kp-resume-row > div {
+    flex-basis: calc(100% - 55px) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-scholar #kp-resumes .kp-resume-row {
+    transition: none !important;
+  }
+}
+
+
+
+/* ==========================================
+   KARTA — RESUME MANAGER LAYOUT FIX
+   ========================================== */
+
+/* Resume panel */
+.app-scholar .kp-resume-panel {
+  display: block !important;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Header */
+.app-scholar .kp-resume-panel > .kp-section-head {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 20px !important;
+}
+
+.app-scholar .kp-resume-panel .kp-section-head > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.app-scholar .kp-resume-panel .kp-section-head p {
+  margin: 7px 0 0 !important;
+}
+
+/* Upload button */
+.app-scholar .kp-resume-add,
+.app-scholar .kp-resume-empty-upload {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 9px !important;
+  min-height: 42px !important;
+  padding: 0 17px !important;
+  flex-shrink: 0;
+  border: 1px solid #292d32 !important;
+  border-radius: 6px !important;
+  background: #292d32 !important;
+  color: #fff !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+}
+
+.app-scholar .kp-resume-add:hover,
+.app-scholar .kp-resume-empty-upload:hover {
+  background: #41464d !important;
+}
+
+/* Hide native file input */
+.app-scholar .kp-resume-panel input[type="file"] {
+  display: none !important;
+}
+
+/* Upload instructions */
+.app-scholar .kp-resume-info {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin: 18px 0 20px !important;
+  padding: 13px 15px !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+}
+
+.app-scholar .kp-resume-info svg {
+  flex: 0 0 auto;
+}
+
+/* Resume cards grid */
+.app-scholar .kp-resume-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 15px !important;
+  align-items: stretch !important;
+  margin: 0 0 18px !important;
+}
+
+/* Individual resume card */
+.app-scholar .kp-resume-card {
+  display: flex !important;
+  flex-direction: column !important;
+  min-width: 0 !important;
+  padding: 17px !important;
+  overflow: hidden !important;
+}
+
+/* Card top row */
+.app-scholar .kp-resume-card-top {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  margin-bottom: 18px !important;
+}
+
+/* PDF / DOC icon */
+.app-scholar .kp-resume-file-icon {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: column !important;
+  gap: 3px !important;
+  width: 54px !important;
+  height: 60px !important;
+  flex: 0 0 54px !important;
+}
+
+.app-scholar .kp-resume-file-icon span {
+  font-size: 9px !important;
+  font-weight: 800 !important;
+}
+
+/* Primary badge */
+.app-scholar .kp-resume-primary-badge,
+.app-scholar .kp-resume-version {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  padding: 6px 9px !important;
+  font-size: 9px !important;
+  font-weight: 800 !important;
+  letter-spacing: .4px !important;
+}
+
+/* File name and metadata */
+.app-scholar .kp-resume-card-content {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  min-width: 0 !important;
+  flex: 1 !important;
+}
+
+.app-scholar .kp-resume-card-content h3 {
+  margin: 0 !important;
+  overflow: hidden !important;
+  font-size: 15px !important;
+  font-weight: 750 !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.app-scholar .kp-resume-meta {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 8px 15px !important;
+  color: #777d85 !important;
+  font-size: 11px !important;
+}
+
+.app-scholar .kp-resume-meta span {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+}
+
+/* Bottom actions */
+.app-scholar .kp-resume-card-actions {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  margin-top: 18px !important;
+  padding-top: 13px !important;
+}
+
+.app-scholar .kp-resume-document-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 13px !important;
+}
+
+.app-scholar .kp-resume-document-actions a,
+.app-scholar .kp-resume-document-actions button,
+.app-scholar .kp-resume-primary-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  min-height: 32px !important;
+  padding: 6px 9px !important;
+  border: 1px solid #e1e1dd !important;
+  border-radius: 5px !important;
+  background: #fff !important;
+  color: #39424e !important;
+  font-size: 11px !important;
+  font-weight: 650 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+
+.app-scholar .kp-resume-document-actions button {
+  color: #9b5050 !important;
+}
+
+.app-scholar .kp-resume-primary-note {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  color: #555b64 !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+}
+
+/* Empty state */
+.app-scholar .kp-resume-empty {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  padding: 35px 20px !important;
+  text-align: center !important;
+}
+
+.app-scholar .kp-resume-empty h3,
+.app-scholar .kp-resume-empty p {
+  margin: 0 !important;
+}
+
+.app-scholar .kp-resume-empty p {
+  max-width: 420px;
+  color: #777d85;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.app-scholar .kp-resume-empty-upload input[type="file"] {
+  display: none !important;
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  .app-scholar .kp-resume-panel > .kp-section-head {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+  }
+
+  .app-scholar .kp-resume-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .app-scholar .kp-resume-add {
+    width: 100%;
+  }
+
+  .app-scholar .kp-resume-card {
+    padding: 14px !important;
+  }
+}
+
+/* FIX: Keep Scholar Profile layout width identical across tabs */
+
+.app-scholar .kp-page {
+  width: 100% !important;
+  max-width: 1184px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+
+.app-scholar .kp-content {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 300px !important;
+  gap: 18px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  align-items: start !important;
+}
+
+.app-scholar .kp-main {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.app-scholar .kp-side {
+  width: 300px !important;
+  min-width: 0 !important;
+  max-width: 300px !important;
+  box-sizing: border-box !important;
+}
+
+.app-scholar .kp-main > * {
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+.app-scholar .kp-main .kp-achievement-grid,
+.app-scholar .kp-main .kp-certification-grid,
+.app-scholar .kp-main .kp-resume-grid {
+  min-width: 0 !important;
+}
+
+@media (max-width: 850px) {
+  .app-scholar .kp-content {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .app-scholar .kp-side {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* =========================================
+   KARTA — SCHOLAR IDENTITY CARD
+   Clean premium styling
+   ========================================= */
+
+.app-scholar .kp-identity {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 28px 30px;
+  margin: 0 0 22px;
+  background: #ffffff;
+  border: 1px solid #e2e3e0;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(25, 35, 45, 0.035);
+  transition: box-shadow .2s ease, border-color .2s ease;
+}
+
+.app-scholar .kp-identity:hover {
+  border-color: #d3d5d1;
+  box-shadow: 0 6px 20px rgba(25, 35, 45, 0.055);
+}
+
+/* Profile image wrapper */
+.app-scholar .kp-avatar-wrap {
+  flex-shrink: 0;
+}
+
+/* Name and details */
+.app-scholar .kp-identity-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.app-scholar .kp-name-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 11px;
+  margin-bottom: 7px;
+}
+
+.app-scholar .kp-identity-copy h1 {
+  margin: 0;
+  color: #202833;
+  font-size: 29px;
+  font-weight: 800;
+  letter-spacing: -0.9px;
+  line-height: 1.25;
+}
+
+.app-scholar .kp-identity-copy p {
+  margin: 5px 0 9px;
+  color: #555e69;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.app-scholar .kp-identity-copy span,
+.app-scholar .kp-identity-copy small {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 5px;
+  color: #7b8490;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Action buttons */
+.app-scholar .kp-identity-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.app-scholar .kp-identity-actions button {
+  min-height: 43px;
+  padding: 0 17px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 750;
+  transition: background .2s ease, box-shadow .2s ease;
+}
+
+.app-scholar .kp-identity-actions button:hover {
+  box-shadow: 0 4px 12px rgba(30, 45, 65, .10);
+}
+
+/* Tablet and mobile */
+@media (max-width: 900px) {
+  .app-scholar .kp-identity {
+    flex-wrap: wrap;
+    padding: 23px;
+    gap: 17px;
+  }
+
+  .app-scholar .kp-identity-actions {
+    width: 100%;
+    margin-left: 0;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 560px) {
+  .app-scholar .kp-identity {
+    padding: 18px;
+  }
+
+  .app-scholar .kp-identity-copy h1 {
+    font-size: 24px;
+  }
+
+  .app-scholar .kp-identity-actions button {
+    flex: 1;
+  }
+}
+
+/* ==============================================
+   KARTA CONNECT — PREMIUM PROFILE CARDS V2
+   Identity / Account Status / Profile Strength
+   ============================================== */
+
+.app-scholar .kp-identity,
+.app-scholar .alumni-request-card,
+.app-scholar .kp-strength {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid #deded9 !important;
+  border-radius: 12px !important;
+  box-shadow:
+    0 2px 5px rgba(25, 32, 42, .025),
+    0 10px 28px rgba(25, 32, 42, .045) !important;
+  transition:
+    box-shadow .25s ease,
+    border-color .25s ease,
+    transform .25s ease !important;
+}
+
+.app-scholar .kp-identity:hover,
+.app-scholar .alumni-request-card:hover,
+.app-scholar .kp-strength:hover {
+  border-color: #c9c9c2 !important;
+  box-shadow:
+    0 5px 12px rgba(25, 32, 42, .035),
+    0 15px 35px rgba(25, 32, 42, .065) !important;
+}
+
+/* 1. SCHOLAR IDENTITY */
+
+.app-scholar .kp-identity {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  padding: 30px 32px !important;
+  margin: 0 0 22px !important;
+  background: #fff !important;
+}
+
+.app-scholar .kp-identity-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.app-scholar .kp-name-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 9px;
+}
+
+.app-scholar .kp-identity-copy h1 {
+  margin: 0 !important;
+  color: #202630 !important;
+  font-size: 32px !important;
+  font-weight: 850 !important;
+  letter-spacing: -1.25px !important;
+  line-height: 1.15 !important;
+}
+
+.app-scholar .kp-identity-copy p {
+  margin: 8px 0 12px !important;
+  color: #535c68 !important;
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+}
+
+.app-scholar .kp-identity-copy span,
+.app-scholar .kp-identity-copy small {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 7px;
+  color: #737d89 !important;
+  font-size: 12px !important;
+  line-height: 1.6 !important;
+}
+
+/* Identity action buttons */
+.app-scholar .kp-identity-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+.app-scholar .kp-identity-actions button {
+  min-height: 46px;
+  padding: 0 19px !important;
+  border-radius: 8px !important;
+  font-size: 12px !important;
+  font-weight: 750 !important;
+  letter-spacing: .05px;
+  box-shadow: none;
+  transition: all .2s ease !important;
+}
+
+.app-scholar .kp-identity-actions button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 16px rgba(25, 40, 60, .10);
+}
+
+/* 2. ACCOUNT STATUS */
+
+.app-scholar .alumni-request-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 31px 32px !important;
+  margin: 22px 0 !important;
+  background: #f8f7f3 !important;
+}
+
+.app-scholar .alumni-request-card > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.app-scholar .alumni-request-card .overline {
+  display: inline-block;
+  color: #85847d !important;
+  font-size: 10px !important;
+  font-weight: 850 !important;
+  letter-spacing: 1.7px !important;
+}
+
+.app-scholar .alumni-request-card h2 {
+  margin: 12px 0 8px !important;
+  color: #222a34 !important;
+  font-size: 24px !important;
+  font-weight: 850 !important;
+  letter-spacing: -.85px !important;
+  line-height: 1.3 !important;
+}
+
+.app-scholar .alumni-request-card p {
+  max-width: 720px;
+  margin: 0 !important;
+  color: #69717b !important;
+  font-size: 13px !important;
+  line-height: 1.85 !important;
+}
+
+.app-scholar .alumni-request-card .alumni-request-action {
+  min-height: 45px;
+  padding: 0 19px;
+  border-radius: 8px;
+  white-space: nowrap;
+  font-weight: 750;
+  transition: all .2s ease;
+}
+
+.app-scholar .alumni-request-card .alumni-request-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 16px rgba(25, 40, 60, .12);
+}
+
+/* 3. PROFILE STRENGTH */
+
+.app-scholar .kp-strength {
+  padding: 30px 32px !important;
+  margin: 22px 0 !important;
+  background: #fff !important;
+}
+
+.app-scholar .kp-strength-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.app-scholar .kp-strength-head b {
+  display: block;
+  color: #242b35 !important;
+  font-size: 21px !important;
+  font-weight: 850 !important;
+  letter-spacing: -.65px !important;
+}
+
+.app-scholar .kp-strength-head span {
+  display: block;
+  margin-top: 7px;
+  color: #818893 !important;
+  font-size: 13px !important;
+  line-height: 1.7 !important;
+}
+
+.app-scholar .kp-strength-head strong {
+  color: #202833 !important;
+  font-size: 35px !important;
+  font-weight: 850 !important;
+  letter-spacing: -1.6px !important;
+}
+
+.app-scholar .kp-progress {
+  height: 10px !important;
+  margin: 22px 0 13px !important;
+  overflow: hidden;
+  border-radius: 20px !important;
+  background: #eae9e5 !important;
+}
+
+.app-scholar .kp-progress i {
+  height: 100%;
+  border-radius: 20px !important;
+  background: #303c4b !important;
+  transition: width .7s ease !important;
+}
+
+.app-scholar .kp-checklist {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: #858b93 !important;
+  font-size: 11px !important;
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  .app-scholar .kp-identity {
+    flex-wrap: wrap;
+    padding: 22px !important;
+    gap: 18px;
+  }
+
+  .app-scholar .kp-identity-copy h1 {
+    font-size: 27px !important;
+  }
+
+  .app-scholar .kp-identity-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .app-scholar .alumni-request-card {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 24px !important;
+  }
+
+  .app-scholar .kp-strength {
+    padding: 24px !important;
+  }
+}
+
+/* KARTA — STATIC 3D CARD SHADOWS */
+
+.app-scholar .kp-identity,
+.app-scholar .alumni-request-card,
+.app-scholar .kp-strength,
+.app-scholar .kp-content .kp-main > .kp-card,
+.app-scholar .kp-resume-panel {
+  border: 1px solid #deded9 !important;
+  box-shadow:
+    0 2px 4px rgba(25, 35, 45, 0.04),
+    0 6px 12px rgba(25, 35, 45, 0.045),
+    0 14px 25px rgba(25, 35, 45, 0.055),
+    0 25px 40px rgba(25, 35, 45, 0.025) !important;
+}
+
+/* No hover movement or animation */
+.app-scholar .kp-identity:hover,
+.app-scholar .alumni-request-card:hover,
+.app-scholar .kp-strength:hover,
+.app-scholar .kp-content .kp-main > .kp-card:hover,
+.app-scholar .kp-resume-panel:hover {
+  transform: none !important;
+}
+
+
+/* ============================================
+   KARTA — SIGNATURE SCHOLAR IDENTITY CARD
+   Distinctive premium profile styling
+   ============================================ */
+
+.app-scholar .kp-identity {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+
+  padding: 30px 32px !important;
+  margin: 0 0 24px !important;
+
+  background: #ffffff !important;
+  border: 1px solid #e1e2df !important;
+  border-radius: 14px !important;
+
+  box-shadow:
+    0 2px 3px rgba(28, 35, 45, .035),
+    0 7px 12px rgba(28, 35, 45, .045),
+    0 15px 25px rgba(28, 35, 45, .055),
+    0 27px 38px rgba(28, 35, 45, .025) !important;
+
+  transform: none !important;
+}
+
+/* Profile photo frame */
+.app-scholar .kp-avatar-wrap {
+  flex-shrink: 0;
+  padding: 4px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow:
+    0 2px 5px rgba(25, 35, 45, .06),
+    0 7px 17px rgba(25, 35, 45, .10);
+}
+
+.app-scholar .kp-avatar-wrap .kp-avatar {
+  border: 2px solid #f0f0ed;
+}
+
+/* Name and identity */
+.app-scholar .kp-identity-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.app-scholar .kp-name-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.app-scholar .kp-identity-copy h1 {
+  margin: 0 !important;
+  color: #1e2733 !important;
+  font-size: 32px !important;
+  font-weight: 850 !important;
+  letter-spacing: -1.3px !important;
+  line-height: 1.2 !important;
+}
+
+.app-scholar .kp-identity-copy p {
+  margin: 7px 0 11px !important;
+  color: #535e6b !important;
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+}
+
+.app-scholar .kp-identity-copy span,
+.app-scholar .kp-identity-copy small {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 7px;
+  color: #78818d !important;
+  font-size: 12px !important;
+  line-height: 1.6 !important;
+}
+
+/* Scholar badge */
+.app-scholar .kp-name-row > span {
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 9px !important;
+  font-weight: 800 !important;
+  letter-spacing: .65px;
+  text-transform: uppercase;
+}
+
+/* Action area */
+.app-scholar .kp-identity-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 11px;
+  margin-left: auto;
+}
+
+.app-scholar .kp-identity-actions button {
+  min-height: 45px;
+  padding: 0 19px !important;
+  border-radius: 8px !important;
+  font-size: 12px !important;
+  font-weight: 750 !important;
+}
+
+/* Static appearance — no card movement */
+.app-scholar .kp-identity:hover {
+  transform: none !important;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .app-scholar .kp-identity {
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 24px !important;
+  }
+
+  .app-scholar .kp-identity-actions {
+    width: 100%;
+    margin-left: 0;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 560px) {
+  .app-scholar .kp-identity {
+    padding: 19px !important;
+  }
+
+  .app-scholar .kp-identity-copy h1 {
+    font-size: 26px !important;
+  }
+}
+
+
+
+/* KARTA — CLEAN MODERN SCHOLAR NAME */
+
+.app-scholar .kp-identity-copy h1 {
+  font-family: inherit !important;
+  font-size: 32px !important;
+  font-weight: 800 !important;
+  letter-spacing: -1.1px !important;
+  line-height: 1.2 !important;
+  color: #202936 !important;
+  text-shadow: none !important;
+  margin: 0 !important;
+}
+
+.app-scholar .kp-name-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 9px;
+}
+
+
+
+/* KARTA — PREMIUM SCHOLAR NAME TYPOGRAPHY */
+
+.app-scholar .kp-identity-copy h1 {
+  font-family: inherit !important;
+  font-size: clamp(32px, 3vw, 36px) !important;
+  font-weight: 850 !important;
+  letter-spacing: -1.35px !important;
+  line-height: 1.15 !important;
+  color: #202a38 !important;
+  text-shadow: none !important;
+  margin: 0 !important;
+  position: relative;
+}
+
+/* Refined spacing around name and badge */
+.app-scholar .kp-name-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+/* Subtle name underline accent */
+.app-scholar .kp-identity-copy h1::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 3px;
+  margin-top: 8px;
+  border-radius: 3px;
+  background: #a8aaa3;
+}
+
+/* Refined scholar badge */
+.app-scholar .kp-name-row > span {
+  padding: 6px 11px !important;
+  border: 1px solid #dedfd9 !important;
+  border-radius: 5px !important;
+  background: #f5f5f1 !important;
+  color: #555e58 !important;
+  font-size: 9px !important;
+  font-weight: 800 !important;
+  letter-spacing: .9px !important;
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   KARTA — DISTINCT SCHOLAR SIDEBAR CARDS
+========================================= */
+
+/* 1. CONTACT & PRIVACY — WARM IVORY */
+.app-scholar .kp-side > .kp-card:nth-child(1) {
+  background: #fbf8f1 !important;
+  border: 1px solid #e8e1d5 !important;
+  border-radius: 12px !important;
+  box-shadow:
+    0 3px 7px rgba(35, 40, 45, .035),
+    0 12px 24px rgba(35, 40, 45, .045) !important;
+}
+
+.app-scholar .kp-side > .kp-card:nth-child(1) h3 {
+  color: #26384b;
+  font-size: 16px;
+  font-weight: 750;
+  letter-spacing: -.3px;
+}
+
+.app-scholar .kp-side > .kp-card:nth-child(1) > p {
+  line-height: 1.7;
+}
+
+/* 2. PROFILE ANALYTICS — DEEP NAVY */
+.app-scholar .kp-side > .kp-card:nth-child(2) {
+  background: #192f49 !important;
+  border: 1px solid #263f5d !important;
+  border-radius: 12px !important;
+  box-shadow:
+    0 3px 7px rgba(15, 30, 48, .10),
+    0 14px 28px rgba(15, 30, 48, .13) !important;
+}
+
+.app-scholar .kp-side > .kp-card:nth-child(2) h3 {
+  color: #ffffff !important;
+  font-size: 16px;
+  font-weight: 750;
+  letter-spacing: -.3px;
+}
+
+.app-scholar .kp-side > .kp-card:nth-child(2) .kp-analytics > div {
+  background: #29435f !important;
+  border: 1px solid #38536f !important;
+  border-radius: 9px !important;
+  padding: 15px 13px !important;
+}
+
+.app-scholar .kp-side > .kp-card:nth-child(2) .kp-analytics b {
+  color: #ffffff !important;
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -.8px;
+}
+
+.app-scholar .kp-side > .kp-card:nth-child(2) .kp-analytics small {
+  color: #c4d2e1 !important;
+  line-height: 1.5;
+}
+
+.app-scholar .kp-side > .kp-card:nth-child(2) .kp-note {
+  display: block;
+  color: #b9c9d9 !important;
+  border-top: 1px solid #3b526b;
+  padding-top: 14px;
+  margin-top: 17px;
+  line-height: 1.6;
+}
+
+/* 3. ACADEMIC IDENTITY — COOL STONE */
+.app-scholar .kp-side > .kp-card:nth-child(3) {
+  background: #f0f3f5 !important;
+  border: 1px solid #dce3e8 !important;
+  border-radius: 12px !important;
+  box-shadow:
+    0 3px 7px rgba(35, 40, 45, .035),
+    0 12px 24px rgba(35, 40, 45, .045) !important;
+}
+
+.app-scholar .kp-side > .kp-card:nth-child(3) h3 {
+  color: #26384b;
+  font-size: 16px;
+  font-weight: 750;
+}
+
+.app-scholar .kp-side > .kp-card:nth-child(3) > b {
+  display: block;
+  color: #193b60;
+  font-size: 17px;
+  font-weight: 800;
+  margin-top: 12px;
+}
+
+.app-scholar .kp-side > .kp-card:nth-child(3) > small {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 9px;
+  background: #e1e9ef;
+  border: 1px solid #d2dee7;
+  border-radius: 5px;
+  color: #38536b;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: .4px;
+}
+
+
+/* ACADEMIC IDENTITY — REFINED DETAILS */
+
+.app-scholar .kp-side > .kp-card:nth-child(3) h3 {
+  color: #26384b !important;
+  font-size: 16px !important;
+  font-weight: 750 !important;
+  margin-bottom: 18px !important;
+}
+
+.app-scholar .kp-side > .kp-card:nth-child(3) > b {
+  display: block !important;
+  color: #193b60 !important;
+  font-size: 19px !important;
+  font-weight: 800 !important;
+  margin-bottom: 8px !important;
+}
+
+.app-scholar .kp-side > .kp-card:nth-child(3) .kp-muted {
+  color: #64778a !important;
+  font-size: 13px !important;
+}
+
+.app-scholar .kp-side > .kp-card:nth-child(3) > small {
+  display: inline-block !important;
+  padding: 7px 10px !important;
+  margin-top: 12px !important;
+  background: #e1e9ef !important;
+  border: 1px solid #d2dee7 !important;
+  border-radius: 5px !important;
+  color: #38536b !important;
+  font-weight: 750 !important;
+}
+
+
+/* PROFILE ANALYTICS — SOFT POWDER BLUE */
+
+.app-scholar .kp-side > .kp-card:nth-child(2) {
+  background: #edf3f8 !important;
+  border: 1px solid #dce6ef !important;
+  border-radius: 12px !important;
+  box-shadow:
+    0 3px 7px rgba(35, 50, 65, .035),
+    0 12px 24px rgba(35, 50, 65, .045) !important;
+}
+
+.app-scholar .kp-side > .kp-card:nth-child(2) h3 {
+  color: #263d55 !important;
+}
+
+.app-scholar .kp-side > .kp-card:nth-child(2) .kp-analytics > div {
+  background: #ffffff !important;
+  border: 1px solid #e1e8ef !important;
+  border-radius: 9px !important;
+}
+
+.app-scholar .kp-side > .kp-card:nth-child(2) .kp-analytics b {
+  color: #244c73 !important;
+}
+
+.app-scholar .kp-side > .kp-card:nth-child(2) .kp-analytics small {
+  color: #718399 !important;
+}
+
+.app-scholar .kp-side > .kp-card:nth-child(2) .kp-note {
+  color: #718399 !important;
+  border-top: 1px solid #d8e2eb !important;
+}
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   KARTA — EDITORIAL SIDEBAR DESIGN
+   Inspired by the supplied reference
+========================================= */
+
+.app-scholar {
+  --karta-teal: #006b67;
+  --karta-ink: #17211f;
+  --karta-muted: #818b88;
+  --karta-line: #e7e9e5;
+  --karta-mint: #edf6f4;
+  --karta-paper: #fffefc;
+}
+
+/* LEFT — PROFILE CARD */
+.app-scholar .profile-summary-card {
+  background: var(--karta-paper) !important;
+  border: 1px solid var(--karta-line) !important;
+  border-radius: 15px !important;
+  box-shadow: 0 5px 18px rgba(20, 45, 40, .045) !important;
+  transition: none !important;
+}
+
+.app-scholar .profile-summary-body b {
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 21px !important;
+  font-weight: 700 !important;
+  letter-spacing: -.45px !important;
+  color: var(--karta-ink) !important;
+}
+
+.app-scholar .profile-summary-body span,
+.app-scholar .profile-summary-body small {
+  color: var(--karta-muted) !important;
+}
+
+.app-scholar .profile-summary-body button {
+  background: var(--karta-teal) !important;
+  color: #fff !important;
+  border: 1px solid var(--karta-teal) !important;
+  border-radius: 30px !important;
+  padding: 10px 16px !important;
+}
+
+/* LEFT — QUICK ACCESS */
+.app-scholar .left-shortcuts {
+  background: #f8f7f2 !important;
+  border: 1px solid #e9e6dd !important;
+  border-radius: 15px !important;
+  box-shadow: 0 4px 15px rgba(20, 45, 40, .035) !important;
+}
+
+.app-scholar .left-shortcuts > b {
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 17px !important;
+  color: var(--karta-ink) !important;
+  letter-spacing: -.2px !important;
+}
+
+.app-scholar .left-shortcuts button {
+  color: #586661 !important;
+  border-radius: 8px !important;
+  transition: none !important;
+}
+
+.app-scholar .left-shortcuts button:hover {
+  background: #eeeee7 !important;
+  color: var(--karta-teal) !important;
+  transform: none !important;
+}
+
+.app-scholar .left-shortcuts button svg {
+  color: var(--karta-teal) !important;
+}
+
+/* RIGHT — CARD HEADINGS */
+.app-scholar .rail-heading h3 {
+  font-family: Georgia, "Times New Roman", serif !important;
+  color: var(--karta-ink) !important;
+  font-size: 19px !important;
+  font-weight: 700 !important;
+  letter-spacing: -.35px !important;
+}
+
+.app-scholar .rail-heading .overline {
+  color: var(--karta-muted) !important;
+  letter-spacing: 1.3px !important;
+}
+
+/* RIGHT — PEOPLE TO KNOW */
+.app-scholar .right-rail .rail-block:not(.jobs-rail) {
+  background: var(--karta-paper) !important;
+  border: 1px solid var(--karta-line) !important;
+  border-radius: 15px !important;
+  box-shadow: 0 5px 18px rgba(20, 45, 40, .04) !important;
+  transition: none !important;
+}
+
+.app-scholar .person {
+  border-top: 1px solid #eeefeb !important;
+}
+
+.app-scholar .person-copy b {
+  color: #263b36 !important;
+}
+
+.app-scholar .round-add {
+  background: #f0f7f5 !important;
+  border: 1px solid #d5e6e2 !important;
+  color: var(--karta-teal) !important;
+  transition: none !important;
+}
+
+.app-scholar .round-add:hover {
+  background: #e3f0ed !important;
+  transform: none !important;
+}
+
+/* RIGHT — PICKED FOR YOU */
+.app-scholar .right-rail .jobs-rail {
+  background: var(--karta-mint) !important;
+  border: 1px solid #cfe2dd !important;
+  border-radius: 15px !important;
+  box-shadow: 0 5px 18px rgba(20, 65, 55, .045) !important;
+  transition: none !important;
+}
+
+.app-scholar .jobs-rail .opportunity {
+  border-top: 1px solid #dceae6 !important;
+}
+
+.app-scholar .jobs-rail .opp-content > b {
+  color: #183d37 !important;
+}
+
+/* TEAL LINKS AND ACTIONS */
+.app-scholar .rail-heading > button {
+  color: var(--karta-teal) !important;
+}
+
+.app-scholar .rail-heading > button:hover {
+  background: #eaf3f0 !important;
+}
+
+/* STATIC CARD DEPTH */
+.app-scholar .left-rail > *,
+.app-scholar .right-rail > * {
+  transform: none !important;
+}
+
+.app-scholar .profile-summary-card:hover,
+.app-scholar .rail-block:hover {
+  transform: none !important;
+}
+
+
+/* PROFILE SUMMARY — WARM CHAMPAGNE SURFACE */
+
+.app-scholar .profile-summary-card {
+  background: #f4efe4 !important;
+  border: 1px solid #e6ddca !important;
+  box-shadow:
+    0 3px 6px rgba(55, 45, 25, .035),
+    0 12px 25px rgba(55, 45, 25, .055) !important;
+}
+
+.app-scholar .profile-summary-body {
+  background: #f4efe4 !important;
+}
+
+.app-scholar .profile-summary-body b {
+  color: #26372f !important;
+}
+
+
+/* QUICK ACCESS — SOFT SAGE SURFACE */
+
+.app-scholar .left-shortcuts {
+  background: #edf2e9 !important;
+  border: 1px solid #dce5d6 !important;
+  border-radius: 15px !important;
+  box-shadow:
+    0 3px 6px rgba(40, 55, 35, .035),
+    0 12px 25px rgba(40, 55, 35, .045) !important;
+}
+
+.app-scholar .left-shortcuts > b {
+  color: #304638 !important;
+}
+
+.app-scholar .left-shortcuts button {
+  color: #566b5b !important;
+}
+
+.app-scholar .left-shortcuts button:hover {
+  background: #e2eadf !important;
+  color: #315e49 !important;
+}
+
+/* QUICK ACCESS — BRIGHT SAGE MINT */
+
+.app-scholar .left-shortcuts {
+  background: #e3f0e5 !important;
+  border: 1px solid #c9dfce !important;
+  border-radius: 15px !important;
+  box-shadow:
+    0 3px 7px rgba(38, 75, 48, .05),
+    0 12px 25px rgba(38, 75, 48, .075) !important;
+}
+
+.app-scholar .left-shortcuts > b {
+  color: #244b35 !important;
+  font-size: 14px !important;
+}
+
+.app-scholar .left-shortcuts button {
+  color: #42644d !important;
+  font-weight: 700 !important;
+}
+
+.app-scholar .left-shortcuts button svg {
+  color: #327b50 !important;
+}
+
+.app-scholar .left-shortcuts button:hover {
+  background: #d3e7d8 !important;
+  color: #245b39 !important;
+}
+
+
+/* QUICK ACCESS — PREMIUM HEADING */
+
+.app-scholar .left-shortcuts > b {
+  display: block !important;
+  color: #245b3c !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.3px !important;
+  padding: 0 8px 13px !important;
+  margin-bottom: 8px !important;
+  position: relative;
+}
+
+/* Elegant decorative underline */
+.app-scholar .left-shortcuts > b::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  width: 48px;
+  height: 3px;
+  border-radius: 10px;
+  background: #4b9564;
+  box-shadow: 0 2px 5px rgba(55, 120, 75, .18);
+}
+
+.app-scholar .profile-summary-body button {
+  background: #477b9e !important;
+  color: #ffffff !important;
+  border: 1px solid #477b9e !important;
+  border-radius: 999px !important;
+  padding: 10px 20px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 3px 8px rgba(71, 123, 158, 0.14) !important;
+}
+
+
+.app-scholar .profile-summary-body button:hover,
+.app-scholar .profile-summary-body button:focus,
+.app-scholar .profile-summary-body button:active {
+  background: #477b9e !important;
+  color: #ffffff !important;
+  border-color: #477b9e !important;
+  box-shadow: 0 3px 8px rgba(71, 123, 158, 0.14) !important;
+  transform: none !important;
+  outline: none !important;
+}
+
+
+
+
+/* RIGHT SIDEBAR — REFINED CARD STYLING */
+
+/* People You May Know */
+.app-scholar .right-rail .rail-block {
+  background: #fffefa !important;
+  border: 1px solid #e8e2d7 !important;
+  border-radius: 18px !important;
+  box-shadow: 0 5px 18px rgba(35, 55, 65, 0.045) !important;
+  padding: 19px 17px !important;
+}
+
+/* Sidebar headings */
+.app-scholar .right-rail .rail-heading h3 {
+  font-family: Georgia, serif !important;
+  color: #193b48 !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+}
+
+.app-scholar .right-rail .rail-heading .overline {
+  color: #82918c !important;
+  letter-spacing: 1.4px !important;
+}
+
+/* People rows */
+.app-scholar .right-rail .person {
+  border-top: 1px solid #eeeae2 !important;
+  padding: 13px 0 !important;
+}
+
+.app-scholar .right-rail .person-copy b {
+  color: #29464b !important;
+  font-size: 11px !important;
+}
+
+.app-scholar .right-rail .person-copy span {
+  color: #778984 !important;
+}
+
+.app-scholar .right-rail .person-copy small {
+  color: #9aa59d !important;
+}
+
+/* Add buttons */
+.app-scholar .right-rail .round-add {
+  background: #edf4f1 !important;
+  color: #39766e !important;
+  border: 1px solid #d6e5df !important;
+  transition: none !important;
+}
+
+.app-scholar .right-rail .round-add:hover {
+  background: #edf4f1 !important;
+  transform: none !important;
+}
+
+/* Picked for You */
+.app-scholar .right-rail .rail-block:has(.jobs-rail) {
+  background: #edf3f4 !important;
+  border-color: #d8e4e5 !important;
+}
+
+.app-scholar .jobs-rail .opportunity {
+  border-top: 1px solid #dce7e7 !important;
+}
+
+.app-scholar .jobs-rail .opp-content>b {
+  color: #25464d !important;
+}
+
+.app-scholar .jobs-rail .opp-content strong {
+  color: #477a66 !important;
+}
+
+/* Quote card */
+.app-scholar .quote-card {
+  background: #f3eee3 !important;
+  border: 1px solid #e5dac6 !important;
+  border-radius: 18px !important;
+  box-shadow: 0 5px 18px rgba(35, 55, 65, 0.04) !important;
+}
+
+/* Remove card hover effects */
+.app-scholar .right-rail .rail-block:hover {
+  transform: none !important;
+  box-shadow: 0 5px 18px rgba(35, 55, 65, 0.045) !important;
+}
+
+
+/* CARD 2 — PICKED FOR YOU */
+.app-scholar .right-rail .rail-block:has(.jobs-rail) {
+  background: #eeeaf5 !important;
+  border: 1px solid #dcd3eb !important;
+  border-top: 4px solid #8270a6 !important;
+  border-radius: 18px !important;
+  box-shadow: 0 6px 20px rgba(75, 58, 105, 0.07) !important;
+}
+
+.app-scholar .jobs-rail .rail-heading h3 {
+  color: #493c65 !important;
+}
+
+.app-scholar .jobs-rail .opportunity {
+  border-top: 1px solid #ddd5e9 !important;
+}
+
+.app-scholar .jobs-rail .opp-content>b {
+  color: #493f60 !important;
+}
+
+/* CARD 3 — QUOTE */
+.app-scholar .quote-card {
+  background: #f4e3d9 !important;
+  border: 1px solid #e8cbbb !important;
+  border-left: 4px solid #c17c5c !important;
+  border-radius: 18px !important;
+  box-shadow: 0 6px 20px rgba(125, 76, 53, 0.09) !important;
+  padding: 20px !important;
+}
+
+/* PICKED FOR YOU — WHITE LINEN */
+.app-scholar .right-rail .rail-block:has(.jobs-rail) {
+  background: #F5F1E8 !important;
+  border: 1px solid #E7DECF !important;
+  border-top: 3px solid #C7B99F !important;
+  border-radius: 18px !important;
+  box-shadow: 0 6px 18px rgba(65, 55, 40, 0.06) !important;
+}
+
+.app-scholar .jobs-rail .rail-heading h3 {
+  color: #344C4A !important;
+}
+
+.app-scholar .jobs-rail .opportunity {
+  border-top: 1px solid #E5DCCF !important;
+}
+
+.app-scholar .jobs-rail .opp-content>b {
+  color: #344C4A !important;
+}
+
+/* PICKED FOR YOU — DISTINCT WHITE LINEN */
+.app-scholar .right-rail .rail-block:has(.jobs-rail),
+.app-scholar .right-rail .jobs-rail {
+  background: #F0E8D9 !important;
+  border: 1px solid #DFD1BA !important;
+  border-radius: 18px !important;
+  box-shadow: 0 6px 18px rgba(75, 60, 40, 0.07) !important;
+}
+
+.app-scholar .jobs-rail .opportunity {
+  background: transparent !important;
+  border-top: 1px solid #DFD1BA !important;
+}
+
+
+
+/* KARTA CONNECT — EDITORIAL TYPOGRAPHY */
+
+/* Modern body typography */
+.app-scholar .feed-column,
+.app-scholar .feed-column button {
+  font-family: 'DM Sans', sans-serif !important;
+}
+
+/* Feed section heading */
+.app-scholar .feed-column .section-top h2 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 27px !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.7px !important;
+}
+
+/* Post author name */
+.app-scholar .feed-author b {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.25px !important;
+}
+
+/* Post content */
+.app-scholar .feed-copy p {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  line-height: 1.85 !important;
+  letter-spacing: 0.05px !important;
+}
+
+/* Post labels */
+.app-scholar .feed-post .tag {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.65px !important;
+  text-transform: uppercase !important;
+}
+
+/* Metadata */
+.app-scholar .feed-author span,
+.app-scholar .feed-author small,
+.app-scholar .post-stats {
+  font-family: 'DM Sans', sans-serif !important;
+  letter-spacing: 0.1px !important;
+}
+
+/* Post action buttons */
+.app-scholar .post-actions button {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+
+
+
+.app-scholar .feed-post {
+  margin-bottom: 20px !important;
+  padding: 20px !important;
+  border: 1px solid #DED9CE !important;
+  border-radius: 18px !important;
+  background: #FFFEFA !important;
+  box-shadow: 0 7px 24px rgba(55, 48, 35, 0.075) !important;
+  transition: none !important;
+}
+
+.app-scholar .feed-post:hover {
+  border-color: #DED9CE !important;
+  box-shadow: 0 7px 24px rgba(55, 48, 35, 0.075) !important;
+}
+
+
+
+.app-scholar .profile-summary-cover {
+  filter: none !important;
+  opacity: 1 !important;
+  background-color: transparent !important;
+  background-blend-mode: normal !important;
+}
+
+.app-scholar .profile-summary-cover::before,
+.app-scholar .profile-summary-cover::after {
+  display: none !important;
+  content: none !important;
+}

@@ -1,0 +1,11 @@
+/* Central stylesheet entry. Keep this order stable: tokens -> legacy base -> refinements -> portal additions. */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap');
+@import './global.css';
+@import './legacy-app.css';
+@import './portals/access.css';
+@import './ui-polish.css';
+@import './portals/scholar.css';
+@import './portals/alumni.css';
+@import './portals/organization.css';
+@import './portals/admin.css';
+@import './portals/messaging.css';

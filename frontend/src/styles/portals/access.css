@@ -1,0 +1,29 @@
+
+/* Karta Connect V2 foundation additions — preserves the approved design tokens. */
+.role-chip{display:inline-flex;align-items:center;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:750;background:#edf1ff;color:#315feA;white-space:nowrap}
+.role-chip.organization{background:#fff0e5;color:#bd6027}
+.role-chip.admin{background:#e8f2e9;color:#287343}
+.access-page{min-height:100vh;background:#faf7f2;color:#17243a;display:flex;flex-direction:column;padding:0 clamp(20px,5vw,76px)}
+.access-header{height:88px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e9e3da}
+.access-label,.access-footnote{font-size:11px;letter-spacing:.12em;font-weight:700;color:#788292}
+.access-content{width:min(100%,1040px);margin:clamp(52px,9vh,100px) auto 72px}
+.access-content h1{font-size:clamp(38px,6vw,66px);line-height:1.04;letter-spacing:-.055em;margin:16px 0}
+.access-intro{max-width:590px;color:#697586;font-size:16px;line-height:1.7;margin-bottom:36px}
+.access-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.access-card{min-height:240px;padding:26px;border:1px solid #e9e3da;border-radius:20px;background:#fff;text-decoration:none;color:#17243a;display:flex;flex-direction:column;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.access-card:hover{transform:translateY(-4px);box-shadow:0 18px 42px #17243a12;border-color:#c8d3f5}
+.access-icon{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;background:#eaf0ff;color:#315fea;margin-bottom:25px}
+.access-card.organization .access-icon{background:#fff0e5;color:#d66a25}
+.access-card.admin .access-icon{background:#e9f4eb;color:#267a43}
+.access-card-title{font-size:21px;font-weight:800;letter-spacing:-.03em}
+.access-card-description{font-size:13px;line-height:1.6;color:#788292;margin-top:8px}
+.access-enter{display:flex;align-items:center;gap:8px;margin-top:auto;padding-top:22px;font-size:13px;font-weight:800;color:#315fea}
+.access-card.organization .access-enter{color:#c66a30}
+.access-card.admin .access-enter{color:#267a43}
+.access-footer{margin-top:auto;padding:22px 0;border-top:1px solid #e9e3da;display:flex;justify-content:space-between;color:#788292;font-size:12px}
+@media(max-width:760px){.access-grid{grid-template-columns:1fr}.access-card{min-height:190px}.access-header{height:72px}.access-label{display:none}.access-content{margin:48px auto}.access-footer{gap:8px;flex-direction:column}}
+
+
+
+  
+

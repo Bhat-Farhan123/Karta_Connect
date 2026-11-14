@@ -1,0 +1,19 @@
+# Dependencies and build output
+node_modules/
+dist/
+
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# Supabase local state
+.supabase/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Local one-off scripts
+frontend/scripts/legacy_modify.py

@@ -1,0 +1,373 @@
+/* ADMIN DASHBOARD: INDEPENDENT COLUMN SCROLLING */
+
+@media (min-width: 801px) {
+
+  /* Keep the admin application fixed to the viewport */
+  .app-admin:has(.dashboard-columns) {
+    height: 100vh;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .app-admin:has(.dashboard-columns) > .layout {
+    height: calc(100vh - 72px);
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  /* Main content layout */
+  .app-admin:has(.dashboard-columns) .main {
+    height: 100%;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .app-admin:has(.dashboard-columns) .main-inner {
+    height: 100%;
+    min-height: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* Dashboard grid */
+  .app-admin .main-inner > .dashboard-columns {
+    flex: 1;
+    min-height: 0;
+    align-items: stretch;
+    overflow: hidden;
+  }
+
+  .app-admin .dashboard-columns {
+    align-items: stretch !important;
+    min-height: 0;
+  }
+
+  /* Independent scrolling for all three columns */
+  .app-admin .dashboard-columns > .left-rail,
+  .app-admin .dashboard-columns > .feed-column,
+  .app-admin .dashboard-columns > .right-rail {
+    height: 100% !important;
+    min-height: 0 !important;
+    align-self: stretch !important;
+    overflow-x: hidden;
+    overflow-y: auto !important;
+    overscroll-behavior: contain;
+  }
+
+  /* Prevent sidebar cards from shrinking */
+  .app-admin .dashboard-columns > .left-rail > * {
+    flex-shrink: 0;
+  }
+}
+
+
+/* COMMUNITY PULSE — ADMIN SIDEBAR */
+
+.app-admin .left-shortcuts.admin-community-note {
+  position: relative;
+  padding: 20px !important;
+  margin-top: 18px;
+  border: 1px solid #f2dfc5 !important;
+  border-radius: 18px !important;
+  background: linear-gradient(145deg, #fffaf1, #fff0df) !important;
+  box-shadow: 0 6px 18px rgba(36, 45, 70, 0.06);
+  overflow: hidden;
+}
+
+.app-admin .admin-community-note b {
+  display: block;
+  color: #172747 !important;
+  font-size: 17px;
+  font-weight: 800;
+  margin-bottom: 9px;
+  letter-spacing: -0.35px;
+}
+
+.app-admin .admin-community-note p {
+  color: #68748a !important;
+  font-size: 12.5px;
+  line-height: 1.7;
+  margin: 0 0 15px !important;
+}
+
+
+/* COMMUNITY PULSE BUTTON */
+/* COMMUNITY PULSE — COMPACT BUTTON */
+
+.app-admin .left-shortcuts.admin-community-note > button {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  flex: 0 0 auto !important;
+
+  width: max-content !important;
+  max-width: 100%;
+  min-height: 34px;
+
+  padding: 8px 12px !important;
+  gap: 7px;
+
+  background: #2457d6 !important;
+  color: #fff !important;
+
+  border: none !important;
+  border-radius: 8px !important;
+
+  font-size: 11px !important;
+  font-weight: 650 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+
+  box-shadow: 0 2px 6px rgba(36, 87, 214, 0.15);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.app-admin .left-shortcuts.admin-community-note > button:hover {
+  background: #1948c2 !important;
+  transform: translateY(-1px);
+}
+
+.app-admin .left-shortcuts.admin-community-note > button svg {
+  width: 13px !important;
+  height: 13px !important;
+  color: #fff !important;
+  stroke: currentColor;
+  flex-shrink: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   KARTA ADMIN — PREMIUM CARD PALETTE
+========================================= */
+
+/* LEFT SIDEBAR — warm ivory */
+.app-admin .dashboard-columns > .left-rail > *:not(.admin-community-note) {
+  background: linear-gradient(145deg, #fbf9f3, #fff7e9) !important;
+  border: 1px solid #fff7ea !important;
+  border-radius: 16px !important;
+  box-shadow: 0 5px 16px rgba(36, 45, 70, 0.045);
+}
+
+/* COMMUNITY PULSE — preserve existing peach design */
+.app-admin .left-shortcuts.admin-community-note {
+  background: linear-gradient(145deg, #faf5eb, #ffeedc) !important;
+}
+
+/* COMMUNITY MEMBERS — soft lavender */f
+.app-admin .right-rail .rail-block {
+  background: linear-gradient(145deg, #f0ecff, #f8f6ff) !important;
+  border: 1px solid #eee8ff !important;
+  border-radius: 16px !important;
+  box-shadow: 0 5px 16px rgba(145, 174, 254, 0.045) !important;
+}
+
+/* PICKED FOR YOU / QUOTE CARD — pale blue */
+.app-admin .right-rail .quote-card {
+  background: linear-gradient(145deg, #e6f1ff, #edf4ff) !important;
+  border: 1px solid #dfe9f8 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 5px 16px rgba(36, 45, 70, 0.045) !important;
+}
+
+/* FEED COMPOSER — warm off-white */
+.app-admin .admin-scholar-composer {
+  background: linear-gradient(145deg, #fffefa, #fff8f0) !important;
+  border: 1px solid #eee3d5 !important;
+  border-radius: 17px !important;
+  box-shadow: 0 6px 20px rgba(36, 45, 70, 0.045) !important;
+}
+
+/* FEED POSTS — clean white */
+.app-admin .feed-post {
+  background: #f8faed !important;
+  border: 1px solid #eee8df !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 15px rgba(36, 45, 70, 0.04) !important;
+}
+
+/* FEED FILTERS — subtle cream */
+.app-admin .admin-home-feed-tabs {
+  background: #f9f5ee !important;
+  border: 1px solid #f0e6d8 !important;
+  border-radius: 12px !important;
+}
+
+/* Subtle hover */
+.app-admin .right-rail .rail-block,
+.app-admin .right-rail .quote-card {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.app-admin .right-rail .rail-block:hover,
+.app-admin .right-rail .quote-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(36, 45, 70, 0.075) !important;
+}
+
+
+.admin-feed-post-image {
+  margin-top: 14px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.admin-feed-post-image img {
+  display: block;
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+
+/* ============================================
+   KARTA — INDIVIDUAL COMMUNITY POST CARDS
+============================================ */
+
+/* Published posts outer panel */
+.app-admin .admin-panel:has(.admin-feed-row) {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* Heading area */
+.app-admin .admin-panel:has(.admin-feed-row) .admin-panel-head {
+  background: #ffffff;
+  border: 1px solid #e9edf3;
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 18px;
+}
+
+/* Each post becomes its own card */
+.app-admin .admin-feed-row {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px 20px;
+
+  background: #ffffff !important;
+  border: 1px solid #e7eaf0 !important;
+  border-radius: 18px !important;
+
+  padding: 24px !important;
+  margin-bottom: 18px !important;
+
+  box-shadow: 0 4px 16px rgba(29, 48, 75, 0.045);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Card hover */
+.app-admin .admin-feed-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(29, 48, 75, 0.075);
+  border-color: #dce4ef !important;
+}
+
+/* Post content */
+.app-admin .admin-feed-row > div:first-child {
+  min-width: 0;
+}
+
+/* Author name */
+.app-admin .admin-feed-row b {
+  color: #193653;
+  font-size: 14px;
+  font-weight: 750;
+  margin-bottom: 5px;
+}
+
+/* Post metadata */
+.app-admin .admin-feed-row small {
+  color: #91a0b2;
+  font-size: 11px;
+  margin-bottom: 13px;
+}
+
+/* Post text */
+.app-admin .admin-feed-row p {
+  color: #50647e;
+  font-size: 13.5px;
+  line-height: 1.8;
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* Image frame */
+.app-admin .admin-feed-post-image {
+  width: min(100%, 760px);
+  margin: 18px auto 0;
+  padding: 5px;
+  border-radius: 15px;
+  background: #f7f9fc;
+  border: 1px solid #e9edf3;
+  overflow: hidden;
+}
+
+/* Image */
+.app-admin .admin-feed-post-image img {
+  display: block;
+  width: 100%;
+  max-height: 430px;
+  object-fit: contain;
+  border-radius: 11px;
+}
+
+/* Remove button */
+.app-admin .admin-feed-row > button {
+  align-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 12px;
+  border: 1px solid #f1deda;
+  border-radius: 9px;
+  background: #fffafa;
+  color: #c65e52;
+  font-size: 11px;
+  font-weight: 650;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.app-admin .admin-feed-row > button:hover {
+  background: #fff0ed;
+  border-color: #e8bdb5;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .app-admin .admin-feed-row {
+    padding: 17px !important;
+    border-radius: 14px !important;
+    gap: 10px;
+  }
+
+  .app-admin .admin-feed-post-image {
+    width: 100%;
+  }
+
+  .app-admin .admin-feed-post-image img {
+    max-height: 300px;
+  }
+}

@@ -1,0 +1,6 @@
+/* Minimal browser reset and shared element defaults. */
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; background: #f7f7f4; }
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; transition: background .18s, color .18s, transform .18s, border-color .18s; }
+button:disabled { opacity: .45; cursor: not-allowed; }
